@@ -7,7 +7,7 @@ public class Farming : MonoBehaviour
     //Is it better to have an array or an ArrayList?
     //ArrayLists are muatable while arrays aren't
     // List pf 5 can change, an array of 5 can't...
-    public int[] crops;
+    public GameObject[][] crops;
 
     public GameObject LandPlot;
 
