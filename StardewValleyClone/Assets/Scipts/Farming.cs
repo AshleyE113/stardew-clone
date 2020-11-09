@@ -14,13 +14,13 @@ public class Farming : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int land_row = 0; land_row < 6; land_row++)
-        {
-            for (int land_col = 5; land_col > 0; land_col--)
-            {
-                crops[land_row][land_col] = LandPlot;
-            }
-        }
+        // for (int land_row = 0; land_row < 6; land_row++)
+        // {
+        //     for (int land_col = 5; land_col > 0; land_col--)
+        //     {
+        //         crops[land_row][land_col] = LandPlot;
+        //     }
+        // }
     }
 
     // Update is called once per frame

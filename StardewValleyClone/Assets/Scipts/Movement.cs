@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int speed;
   void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            GetComponent<Transform>().Translate(new Vector3(0.5f, 0, 0));
-            //GetComponent<Transform>().Translate(Vector3.left, right...); works
-            //transform. can replace GetCompt...>() section
-            //GetComponent<Animator>().Play("Right");
+            GetComponent<Transform>().Translate(new Vector3(0.5f* speed * Time.fixedDeltaTime, 0, 0));
         } 
         else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                GetComponent<Transform>().Translate(new Vector3(-0.5f,0,0));
-                //GetComponent<Animator>().Play("Left");
+                GetComponent<Transform>().Translate(new Vector3(-0.5f* speed * Time.fixedDeltaTime,0,0));
             
             }
             else if (Input.GetKey(KeyCode.UpArrow))
                 {
-                    GetComponent<Transform>().Translate(new Vector3(0,0.5f,0));
+                    GetComponent<Transform>().Translate(new Vector3(0,0.5f* speed * Time.fixedDeltaTime,0));
                 }
 
               else if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    GetComponent<Transform>().Translate(new Vector3(0,-0.5f,0));
+                    GetComponent<Transform>().Translate(new Vector3(0,-0.5f* speed * Time.fixedDeltaTime,0));
                 }
                 else
                 {
