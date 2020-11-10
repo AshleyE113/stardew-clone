@@ -9,6 +9,16 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/StardewValleyClone/[Ll]ibrary/
+/StardewValleyClone/[Tt]emp/
+/StardewValleyClone/[Oo]bj/
+/StardewValleyClone/[Bb]uild/
+/StardewValleyClone/[Bb]uilds/
+/StardewValleyClone/[Ll]ogs/
+/StardewValleyClone/[Mm]emoryCaptures/
+!/StardewValleyClone/[Aa]ssets/**/*.meta
+/StardewValleyClone/[Aa]ssets/Plugins/Editor/JetBrains*
+/StardewValleyClone/.vs/ 
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

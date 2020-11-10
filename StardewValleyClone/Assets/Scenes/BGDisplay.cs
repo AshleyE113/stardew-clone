@@ -14,7 +14,7 @@ public class BGDisplay : MonoBehaviour
         {
             for (int y_pos = 10; y_pos > 0; y_pos--)
             {
-                Instantiate(BGDisplay, new Vector2(x_pos, y_pos), BGland.rotation);
+                //Instantiate(BGDisplay, new Vector2(x_pos, y_pos), BGland.rotation);
             }
         }
         
