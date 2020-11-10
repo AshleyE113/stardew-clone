@@ -68,3 +68,15 @@ StardewValleyClone/Packages/
 StardewValleyClone/.vscode/
 
 StardewValleyClone/Temp/UnityLockfile
+
+/StardewValleyClone/[Ll]ibrary/
+/StardewValleyClone/[Tt]emp/
+/StardewValleyClone/[Oo]bj/
+/StardewValleyClone/[Bb]uild/
+/StardewValleyClone/[Bb]uilds/
+/StardewValleyClone/[Ll]ogs/
+/StardewValleyClone/[Mm]emoryCaptures/
+!/StardewValleyClone/[Aa]ssets/**/*.meta
+/StardewValleyClone/[Aa]ssets/Plugins/Editor/JetBrains*
+/StardewValleyClone/.vs/ 
+
