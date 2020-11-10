@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public bool faceRight;
     public bool faceUp;
     public bool faceDown;
+    public bool canMove;
+    private bool raise;
 
     void Start()
     {
@@ -25,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
           faceRight = false;
           faceUp = false;
           faceDown = true;
+          canMove = true;
+          raise = false;
     }
 
      void FixedUpdate()
@@ -36,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement = Vector2.zero;
-        if(movement == Vector2.zero){
+        if(movement == Vector2.zero){ //the direction player is facing
             if(faceLeft){
             anim.SetBool("leftWalk", false);
             anim.SetBool("faceLeft", true);
@@ -53,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("faceUp", false);
                 anim.SetBool("downWalk", false);
                 anim.SetBool("faceDown", false);
-
             }else if(faceDown){
             anim.SetBool("downWalk", false);
             anim.SetBool("faceDown", true);
@@ -62,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("faceUp", false);
                 anim.SetBool("leftWalk", false);
                 anim.SetBool("faceLeft", false);
-
             }else if(faceUp){
             anim.SetBool("upWalk", false);
             anim.SetBool("faceUp", true);
@@ -73,8 +75,8 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("faceLeft", false);
             }
         }
-     
-        //deteacrt which direction is facing while clicking which input
+        //deteact which direction is facing while clicking which input
+        if(canMove){  //set whether player can move while fishing or farming
         if (Input.GetKey(rightKey))
         {
             movement += Vector2.right;
@@ -85,9 +87,7 @@ public class PlayerMovement : MonoBehaviour
                 faceDown = false;
             anim.SetBool("leftWalk", true);
             anim.SetBool("faceLeft", false);
-            
         }
-
         if (Input.GetKey(leftKey))
         {
             movement += Vector2.left;
@@ -121,7 +121,21 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("faceDown", false);
 
         }
-
+        }
+        //FishingControl
+        if(Input.GetKeyDown(KeyCode.Space)){ //determine strength of casting
+            canMove = false;
+            anim.SetBool("faceDown", false);
+            anim.SetBool("downRaise", true);
+            //add strength, less than ??amount
+            raise = true;
+        }
+        if(raise){
+            if(Input.GetKeyUp(KeyCode.Space)){
+                Debug.Log("yup");
+                raise = false;
+            }
+        }
 
     }
 }
