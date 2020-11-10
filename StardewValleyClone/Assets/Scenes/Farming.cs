@@ -11,9 +11,13 @@ public class Farming : MonoBehaviour
 
     public GameObject LandPlot;
 
+    public Color HasSeeds;
+    public GameObject Seeds;
+
     // Start is called before the first frame update
     void Start()
     {
+        /*
         for (int land_row = 0; land_row < 6; land_row++)
         {
             for (int land_col = 5; land_col > 0; land_col--)
@@ -21,11 +25,15 @@ public class Farming : MonoBehaviour
                 crops[land_row][land_col] = LandPlot;
             }
         }
+        */
     }
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+
+    private void OnCollisionExit2D(Collision2D Seed)
     {
-        
+        //GetComponent<SpriteRenderer>().color = HasSeeds;
+        Debug.Log("Left the soil area");
+        //new Color(0.63f, 0.78f, 0.61f);
     }
 }
