@@ -44,7 +44,15 @@ public class TileManager : MonoBehaviour
             {
                 allTiles.Add(tile, tileData);
                 Debug.Log(tile + " + " + tileData);
+                //Debug.Log(GroundTilemap.GetTile(new Vector3Int(0,0,0)));
             }
         }
+    }
+
+    public TileBase MatchTile(Vector3Int pos)
+    {
+        //Debug.Log(GroundTilemap.cellBounds);
+        //Debug.Log("A "+GroundTilemap.cellBounds.allPositionsWithin);
+        return GroundTilemap.GetTile(GroundTilemap.WorldToCell(pos));
     }
 }
