@@ -49,10 +49,11 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    public TileBase MatchTile(Vector3Int pos)
+    public Vector3Int MatchTile(Vector3Int pos)
     {
         //Debug.Log(GroundTilemap.cellBounds);
         //Debug.Log("A "+GroundTilemap.cellBounds.allPositionsWithin);
-        return GroundTilemap.GetTile(GroundTilemap.WorldToCell(pos));
+        //return GroundTilemap.GetTile(GroundTilemap.WorldToCell(pos));
+        return GroundTilemap.WorldToCell(pos);
     }
 }

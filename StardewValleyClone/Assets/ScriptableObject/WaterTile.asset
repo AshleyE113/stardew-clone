@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf54d04b9147c54b862d4135f040cf9, type: 3}
+  m_Name: WaterTile
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: b4b348abbdb619c4c970134f02a1b350, type: 2}
+  - {fileID: 11400000, guid: fa73aa6967690ba48beb0d5219c2bc55, type: 2}
+  - {fileID: 11400000, guid: d2a4ceae7de954347819b20d666be31a, type: 2}
+  - {fileID: 11400000, guid: 8a75d1b946863da4596fb3ea0aa41754, type: 2}
+  - {fileID: 11400000, guid: e6196766c47e5ff43907b1c082081887, type: 2}
+  - {fileID: 11400000, guid: a857ba17bf1c0fc4fba5ba8c2c405611, type: 2}
+  - {fileID: 11400000, guid: f8081b85dedd0a04dba357757729c6c9, type: 2}
+  - {fileID: 11400000, guid: cae58b90d5e6dcc46b4d80cae01c9090, type: 2}
+  - {fileID: 11400000, guid: 7aa7bbf4feb7aa74aaa29cf326f6a7de, type: 2}
+  Walkable: 0
+  Seedable: 0
+  Fishable: 1

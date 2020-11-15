@@ -8,11 +8,14 @@ public class Movement : MonoBehaviour
     //This function will eventually enter the playermanager script
     void Seed()
     {
-        var currentPos = new Vector3Int((int)gameObject.transform.position.x, (int)gameObject.transform.position.y, (int)gameObject.transform.position.z);
-        Debug.Log(TileManager.tileManager.MatchTile(currentPos));
-        TileBase currentTile = TileManager.tileManager.MatchTile(currentPos);
-        TileManager.tileManager.GroundTilemap.SetTileFlags(TileManager.tileManager.GroundTilemap.WorldToCell(currentPos), TileFlags.None);
-        TileManager.tileManager.GroundTilemap.SetColor(TileManager.tileManager.GroundTilemap.WorldToCell(currentPos), Color.black);
+        //var currentPos = new Vector3Int((int)gameObject.transform.position.x, (int)gameObject.transform.position.y, (int)gameObject.transform.position.z);
+        var currentPos = Vector3Int.FloorToInt(gameObject.transform.position);
+        //Debug.Log(TileManager.tileManager.MatchTile(currentPos));
+        //TileBase currentTile = TileManager.tileManager.MatchTile(currentPos);
+        Vector3Int tileCellPos = TileManager.tileManager.MatchTile(currentPos);
+        Debug.Log(currentPos+" "+tileCellPos);
+        TileManager.tileManager.GroundTilemap.SetTileFlags(tileCellPos, TileFlags.None);
+        TileManager.tileManager.GroundTilemap.SetColor(tileCellPos, Color.black);
     }
 
   void Update()
