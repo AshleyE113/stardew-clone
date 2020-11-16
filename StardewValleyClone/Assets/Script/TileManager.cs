@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -43,6 +44,10 @@ public class TileManager : MonoBehaviour
             foreach (var tile in tileData.tiles)
             {
                 allTiles.Add(tile, tileData);
+                if (tileData.Name == "Water")
+                { 
+                    
+                }
                 Debug.Log(tile + " + " + tileData);
                 //Debug.Log(GroundTilemap.GetTile(new Vector3Int(0,0,0)));
             }
@@ -54,6 +59,11 @@ public class TileManager : MonoBehaviour
         //Debug.Log(GroundTilemap.cellBounds);
         //Debug.Log("A "+GroundTilemap.cellBounds.allPositionsWithin);
         //return GroundTilemap.GetTile(GroundTilemap.WorldToCell(pos));
+
+        var tmp_tile = GroundTilemap.GetTile(GroundTilemap.WorldToCell(pos));
+        Debug.Log("Seedable " + allTiles[tmp_tile].Seedable);
+
+
         return GroundTilemap.WorldToCell(pos);
     }
 }

@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8081b85dedd0a04dba357757729c6c9, type: 2}
   - {fileID: 11400000, guid: cae58b90d5e6dcc46b4d80cae01c9090, type: 2}
   - {fileID: 11400000, guid: 7aa7bbf4feb7aa74aaa29cf326f6a7de, type: 2}
+  Name: Water
   Walkable: 0
   Seedable: 0
   Fishable: 1

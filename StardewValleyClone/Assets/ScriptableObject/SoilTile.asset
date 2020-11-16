@@ -27,6 +27,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3aa5c5b9577907d488001ccd792a413b, type: 2}
   - {fileID: 11400000, guid: e9319ca0e79163a4eaa1526d9960df5f, type: 2}
   - {fileID: 11400000, guid: 96ff2e9ac34454342a16fce2d623ae8e, type: 2}
+  Name: Soil
   Walkable: 1
   Seedable: 1
   Fishable: 0

@@ -11,6 +11,7 @@ public class TileData : ScriptableObject
     public TileBase[] tiles;
 
     //Check the actions that can be done on this tile
+    public String Name;
     public Boolean Walkable;
     public Boolean Seedable;
     public Boolean Fishable;
@@ -20,7 +21,7 @@ public class TileData : ScriptableObject
 
 
     public void MakeTile()
-    { 
+    {
         //Leaving this as empty, I currently didn't found a way to script individual tiles    
     }
 
