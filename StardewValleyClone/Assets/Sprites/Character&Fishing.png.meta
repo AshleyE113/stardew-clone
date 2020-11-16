@@ -567,12 +567,12 @@ TextureImporter:
       name: Character&Fishing_12
       rect:
         serializedVersion: 2
-        x: 314
-        y: 422
+        x: 307
+        y: 410
         width: 23
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.5000008}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,12 +588,12 @@ TextureImporter:
       name: Character&Fishing_13
       rect:
         serializedVersion: 2
-        x: 337
-        y: 422
+        x: 354
+        y: 410
         width: 23
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.5000008}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -735,12 +735,12 @@ TextureImporter:
       name: Character&Fishing_20
       rect:
         serializedVersion: 2
-        x: 174
-        y: 385
-        width: 13
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 164
+        y: 373
+        width: 23
+        height: 38
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.4999984}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -756,12 +756,12 @@ TextureImporter:
       name: Character&Fishing_21
       rect:
         serializedVersion: 2
-        x: 211
-        y: 385
-        width: 13
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 201
+        y: 373
+        width: 23
+        height: 38
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.49999678}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -777,12 +777,12 @@ TextureImporter:
       name: Character&Fishing_22
       rect:
         serializedVersion: 2
-        x: 244
-        y: 385
-        width: 13
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 234
+        y: 373
+        width: 23
+        height: 38
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.4999984}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -798,12 +798,12 @@ TextureImporter:
       name: Character&Fishing_23
       rect:
         serializedVersion: 2
-        x: 281
-        y: 385
-        width: 13
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 271
+        y: 373
+        width: 23
+        height: 38
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.4999984}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -841,7 +841,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 176
-        y: 350
+        y: 323
         width: 12
         height: 26
       alignment: 0
@@ -862,7 +862,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 213
-        y: 350
+        y: 323
         width: 12
         height: 26
       alignment: 0
@@ -883,7 +883,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 246
-        y: 350
+        y: 323
         width: 12
         height: 26
       alignment: 0
@@ -904,7 +904,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 283
-        y: 350
+        y: 323
         width: 12
         height: 26
       alignment: 0
@@ -925,7 +925,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 314
-        y: 350
+        y: 323
         width: 12
         height: 26
       alignment: 0
@@ -945,8 +945,8 @@ TextureImporter:
       name: Character&Fishing_30
       rect:
         serializedVersion: 2
-        x: 333
-        y: 350
+        x: 353
+        y: 323
         width: 12
         height: 26
       alignment: 0
