@@ -44,19 +44,16 @@ public class Fishing : MonoBehaviour
         timer = 0;
         startT = false;
         canFish = true;
-        // StrRenderer.GetComponent<FishingLine>().enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float step = speed * Time.deltaTime; //casting bait with speed
-        Bait.transform.position = Vector2.MoveTowards(Bait.transform.position, Target.transform.position, step);
+        Bait.transform.position = Vector2.MoveTowards(Bait.transform.position, Target.transform.position, step); //Bair always move towards the target
         playerPos = Player.transform.position;  //always get player position
         
         powerbar.value = power;  //display value on slider, when press, value increase
-        //  if(canFish){
-            if(canCast){
+            if(canCast){ //if player can cast
                 if(Input.GetMouseButton(0)){  //Input.GetKey(KeyCode.Space)
                     Slider.SetActive(true);
                     Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);  //get mouseposition
@@ -71,15 +68,14 @@ public class Fishing : MonoBehaviour
                     Debug.Log(mousePos);   //take the y of mousepos
                     Bait.SetActive(true);
                     //Bait.GetComponent<Rigidbody2D>().AddForce(Vector2.left,ForceMode2D.Impulse);//add a slight force to mimic the curve
-                    ThrowBait();
+                    ThrowBait(); //this is where the bait get thrown
                     Slider.SetActive(false);
                     canCast = false;
                     //render line
          
                 }
             }
-        //  }
-            if(!canCast){
+            if(!canCast){ //is cancast is false, player can reel in
                 ReelIn();
             }
             if(startT){ //cooldown time start counting
@@ -94,7 +90,7 @@ public class Fishing : MonoBehaviour
             }
     }
 
-    void ThrowBait(){   //cast out the bait into the water
+    void ThrowBait(){   //cast out the bait into the water, can do tile checking here inside this function!!
         Bait.transform.LookAt(mousePos);
         distance = CalDistance(finalValue);  //calculate available distance from casting strength
         Debug.Log(distance);

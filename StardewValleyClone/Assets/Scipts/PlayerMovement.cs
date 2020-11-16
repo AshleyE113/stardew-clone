@@ -49,9 +49,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        UI.transform.eulerAngles = new Vector3(0, 0, 0);
+        UI.transform.eulerAngles = new Vector3(0, 0, 0); //the UI should not flip
         movement = Vector2.zero;
-        if(movement == Vector2.zero){ //the direction player is facing
+        if(movement == Vector2.zero){ //the direction player is facing + animation true false
             if(faceLeft){
                 anim.SetBool("leftWalk", false);
                 anim.SetBool("faceLeft", true);
@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(rightKey))
             {
                 movement += Vector2.right;
-                transform.eulerAngles = new Vector3(0, 180, 0);  //flip object
+                transform.eulerAngles = new Vector3(0, 180, 0);  //flip player
                     faceLeft = false;
                     faceRight = true;
                     faceUp = false;
@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
 
             }
         }
-        //FishingControl
+        //FishingControl+animation on Click
 if(Fishing.Instance.canFish){ //if player is not ready to cast, dont play animation
         if(Input.GetMouseButton(0)){ //this side control mainly the animation of the player when casting
             //canMove = false;
@@ -186,7 +186,7 @@ if(Fishing.Instance.canFish){ //if player is not ready to cast, dont play animat
             Debug.Log("here");
             canMove = true; //player can move after reeling in
             if(Fishing.Instance.timer>3){ //cooldown time after reel in
-            Fishing.Instance.canCast = true; 
+            Fishing.Instance.canCast = true; //can cast again after cool down
             }
             Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = false;
             StrRenderer.GetComponent<LineRenderer>().sortingOrder = 0;//changing sorting layer of the linerenderer;Player = 1;
