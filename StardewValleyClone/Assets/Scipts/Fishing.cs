@@ -43,7 +43,7 @@ public class Fishing : MonoBehaviour
         canCast = true;
         timer = 0;
         startT = false;
-        canFish = true;
+        canFish = true;  //switch to false if plyer is not holding the fishing rod
     }
 
     void Update()
@@ -53,6 +53,7 @@ public class Fishing : MonoBehaviour
         playerPos = Player.transform.position;  //always get player position
         
         powerbar.value = power;  //display value on slider, when press, value increase
+        if(canFish){ //if player is not holding a fishing rod, this will not happen
             if(canCast){ //if player can cast
                 if(Input.GetMouseButton(0)){  //Input.GetKey(KeyCode.Space)
                     Slider.SetActive(true);
@@ -78,6 +79,7 @@ public class Fishing : MonoBehaviour
             if(!canCast){ //is cancast is false, player can reel in
                 ReelIn();
             }
+        }//ends here
             if(startT){ //cooldown time start counting
                 timer+=Time.deltaTime;
                 canFish = false;
@@ -88,6 +90,7 @@ public class Fishing : MonoBehaviour
                 startT = false;
                 timer = 0;
             }
+        
     }
 
     void ThrowBait(){   //cast out the bait into the water, can do tile checking here inside this function!!
