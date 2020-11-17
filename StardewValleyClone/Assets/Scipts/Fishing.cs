@@ -11,6 +11,7 @@ public class Fishing : MonoBehaviour
     public GameObject Slider;
     public float power;
     public float finalValue;
+    public Image fill;
     [Header("OtherObject")]
     public GameObject Bait;
     public GameObject Player;
@@ -29,6 +30,7 @@ public class Fishing : MonoBehaviour
     bool startT;
     public float timer;
     public bool canFish;
+    bool decrease;
     void Awake() {
         Instance = this;
     }
@@ -59,14 +61,23 @@ public class Fishing : MonoBehaviour
                     Slider.SetActive(true);
                     Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);  //get mouseposition
                     mousePos = worldMousePos;
-                    power+=1f;  //increase strength
+                    if(power>99){  //line 63-72: this make power being able to increase and decrease on hold
+                        decrease = true; 
+                    }else if(power<1){
+                       decrease = false; 
+                    }
+                    if(decrease){
+                      power-=1f;
+                    }else{
+                       power+=1f;  
+                    }//ends here
                     hold = true;
                 }
             }
             if(hold && canCast){
                 if(Input.GetMouseButtonUp(0)){  //determine the final strength of the cast
                     finalValue = power;
-                    Debug.Log(mousePos);   //take the y of mousepos
+                    Debug.Log(finalValue);   //take the y of mousepos
                     Bait.SetActive(true);
                     //Bait.GetComponent<Rigidbody2D>().AddForce(Vector2.left,ForceMode2D.Impulse);//add a slight force to mimic the curve
                     ThrowBait(); //this is where the bait get thrown
@@ -90,7 +101,16 @@ public class Fishing : MonoBehaviour
                 startT = false;
                 timer = 0;
             }
-        
+        //Changing colors of power indicator bar:
+        if(power<25){
+            fill.GetComponent<Image>().color = new Color32(255, 25, 0, 255);  //red
+        }else if(power>25&&power<50){
+            fill.GetComponent<Image>().color = new Color32(255, 124, 0, 255);
+        }else if(power>50&&power<75){
+            fill.GetComponent<Image>().color = new Color32(255, 203, 0, 255);
+        }else if(power>75&&power<=100){
+            fill.GetComponent<Image>().color = new Color32(0, 255, 18, 255);
+        }
     }
 
     void ThrowBait(){   //cast out the bait into the water, can do tile checking here inside this function!!

@@ -401,6 +401,7 @@ MonoBehaviour:
   Slider: {fileID: 142408675}
   power: 0
   finalValue: 0
+  fill: {fileID: 1815127029}
   Bait: {fileID: 162549905}
   Player: {fileID: 1860303812}
   brb: {fileID: 162549908}
@@ -1023,7 +1024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.07041359, a: 1}
+  m_Color: {r: 1, g: 0.79322517, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
