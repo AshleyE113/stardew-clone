@@ -22,6 +22,10 @@ public class TileData : ScriptableObject
 
     public void MakeTile()
     {
+        if (Walkable)
+        {
+            GameObject go = new GameObject();
+        }
         //Leaving this as empty, I currently didn't found a way to script individual tiles    
     }
 

@@ -36,6 +36,7 @@ public class TileManager : MonoBehaviour
         
     }
 
+    //This function loads all the tile types into a dictionary
     private void GetAllTiles()
     {
         allTiles = new Dictionary<TileBase, TileData>();
@@ -45,8 +46,10 @@ public class TileManager : MonoBehaviour
             {
                 allTiles.Add(tile, tileData);
                 if (tileData.Name == "Water")
-                { 
-                    
+                {
+                    GameObject go = new GameObject();
+                    go.AddComponent<BoxCollider2D>();
+                    //add here
                 }
                 Debug.Log(tile + " + " + tileData);
                 //Debug.Log(GroundTilemap.GetTile(new Vector3Int(0,0,0)));
@@ -54,6 +57,9 @@ public class TileManager : MonoBehaviour
         }
     }
 
+    //This is a function that will give a quick acess to a corresponding tile postion based on the world postion
+    //The reason that I didn't return TileBase itself is that it actually didn't have a getpos() in itself
+    //Maybe I should add one for the tiledata later
     public Vector3Int MatchTile(Vector3Int pos)
     {
         //Debug.Log(GroundTilemap.cellBounds);
