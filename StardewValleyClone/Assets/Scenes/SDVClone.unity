@@ -158,6 +158,7 @@ MonoBehaviour:
   OnLand: 0
   isDragging: 0
   newInstance: {fileID: 645335228}
+  appearance: {fileID: 2800000, guid: 2f540615e06f6ee4cb002c5a2fdcb599, type: 3}
 --- !u!50 &645335230
 Rigidbody2D:
   serializedVersion: 4
@@ -527,7 +528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8e28531354c674b8a31acad57b52c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HasSeeds: {r: 0.25490198, g: 0.13333334, b: 0.039215688, a: 0}
+  HasSeeds: {r: 0.25490198, g: 0.13333334, b: 0.039215688, a: 1}
   Seeds: {fileID: 645335228}
 --- !u!4 &1745701042
 Transform:

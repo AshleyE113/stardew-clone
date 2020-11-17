@@ -5,31 +5,49 @@ using UnityEngine;
 public class FarmLandChange : MonoBehaviour
 {
     public Color HasSeeds;
+    public Color NoSeeds;
     public GameObject Seeds;
-    // Start is called before the first frame update
 
+    public Texture2D appearance;
+    private Sprite sprout;
 
-    private void OnCollisionEnter2D(Collision2D Seeds)
+    private SpriteRenderer Rend_spr;
+    public bool canHarvest;
+
+    private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("Staying here");
+        Debug.Log("Triggering here");
         GetComponent<SpriteRenderer>().color = HasSeeds;
-        //new Color(0.63f, 0.78f, 0.61f);
+        GrowPlant();
+        canHarvest = true;
+    }
+    
+
+    //Must...
+//Start off with a small sprite and then as time passes it grows.
+    void GrowPlant()
+    {
+        //Instansiate a sprite, a small square
+        //Rend_spr = gameObject.AddComponent<SpriteRenderer>(); //as SpriteRenderer;
+        //Rend_spr.color = new Color(1.0f, 2.0f, 3.0f, 4.0f);
+        Sprite.Create(appearance, new Rect(1.9f, 1.9f, 1.9f, 1.9f), new Vector2(Seeds.transform.position.x, Seeds.transform.position.y));
+        Debug.Log("Hey! I'm here");
+
     }
 
-    private void OnCollisionStay2D(Collision2D Seeds)
+    void OnMouseDown()
     {
-        Debug.Log("Staying here");
-        GetComponent<SpriteRenderer>().color = HasSeeds;     
+        GetComponent<SpriteRenderer>().color = NoSeeds;
+        Debug.Log("Reping here");
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        if (ToPlant.OnLand)
+        if (canHarvest)
         {
-            GetComponent<SpriteRenderer>().color = waterColor;
-            new Color(0.63f, 0.78f, 0.61f);
+            OnMouseDown();
         }
     }
-    */
+    
 }

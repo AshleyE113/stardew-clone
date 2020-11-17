@@ -11,6 +11,8 @@ public class ToPlant : MonoBehaviour
     public bool isDragging;
     public GameObject newInstance;
 
+    //For Grow fun
+
     ///*
     void Start()
     {
@@ -42,6 +44,7 @@ public class ToPlant : MonoBehaviour
     {
         OnLand = true;
         Debug.Log("In the soil");
+        Seeds.SetActive(false);
         //Destroy(newInstance);
     }
 }
