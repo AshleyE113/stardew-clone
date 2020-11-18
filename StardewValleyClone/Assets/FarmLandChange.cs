@@ -13,6 +13,12 @@ public class FarmLandChange : MonoBehaviour
 
     private SpriteRenderer Rend_spr;
     public bool canHarvest;
+    public bool mouseOver;
+
+    void Start()
+    {
+        mouseOver = false;   
+    }
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -35,18 +41,22 @@ public class FarmLandChange : MonoBehaviour
 
     }
 
-    void OnMouseDown()
+    private void OnMouseEnter()
+    {
+        mouseOver = true;
+    }
+    void Reap()
     {
         GetComponent<SpriteRenderer>().color = NoSeeds;
-        Debug.Log("Reping here");
+        Debug.Log("Reaping here");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canHarvest)
+        if (canHarvest && Input.GetMouseButtonDown(0) && mouseOver == true)
         {
-            OnMouseDown();
+            Reap();
         }
     }
     
