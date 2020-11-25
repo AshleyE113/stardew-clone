@@ -17,7 +17,6 @@ public class Fishing : MonoBehaviour
     public GameObject Player;
     public Rigidbody2D brb;
     public GameObject Target;
-    // public FishingLine fl;
     [Header("Position&Speed")]
     Vector3 mousePos;
     public float speed;
@@ -26,10 +25,10 @@ public class Fishing : MonoBehaviour
     Vector2 playerPos;
     [Header("Status")]
     public bool hold;
-    public bool canCast;
+    // public bool canCast;
     bool startT;
     public float timer;
-    public bool canFish;
+    // public bool canFish;
     bool decrease;
     void Awake() {
         Instance = this;
@@ -42,10 +41,8 @@ public class Fishing : MonoBehaviour
         Bait.SetActive(false);
         brb = Bait.GetComponent<Rigidbody2D>();
         Slider.SetActive(false);
-        canCast = true;
         timer = 0;
         startT = false;
-        canFish = true;  //switch to false if plyer is not holding the fishing rod
     }
 
     void Update()
@@ -53,11 +50,10 @@ public class Fishing : MonoBehaviour
         float step = speed * Time.deltaTime; //casting bait with speed
         Bait.transform.position = Vector2.MoveTowards(Bait.transform.position, Target.transform.position, step); //Bair always move towards the target
         playerPos = Player.transform.position;  //always get player position
-        
         powerbar.value = power;  //display value on slider, when press, value increase
-        if(canFish){ //if player is not holding a fishing rod, this will not happen
-            if(canCast){ //if player can cast
-                if(Input.GetMouseButton(0)){  //Input.GetKey(KeyCode.Space)
+
+            if(PlayerMovement.Instance.fishstate == 1){ //state 1: player can cast
+                if(Input.GetMouseButton(0)&&ClickableArea.Instance.inField == true){  //Input.GetKey(KeyCode.Space)
                     Slider.SetActive(true);
                     Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);  //get mouseposition
                     mousePos = worldMousePos;
@@ -72,37 +68,29 @@ public class Fishing : MonoBehaviour
                        power+=1f;  
                     }//ends here
                     hold = true;
+                    PlayerMovement.Instance.canMove = false;
                 }
             }
-            if(hold && canCast){
-                if(Input.GetMouseButtonUp(0)){  //determine the final strength of the cast
+            if(hold && PlayerMovement.Instance.fishstate == 2){ //holding mouse and state2
                     finalValue = power;
-                    Debug.Log(finalValue);   //take the y of mousepos
+                    Debug.Log(finalValue); //take the y of mousepos
                     Bait.SetActive(true);
-                    //Bait.GetComponent<Rigidbody2D>().AddForce(Vector2.left,ForceMode2D.Impulse);//add a slight force to mimic the curve
-                    ThrowBait(); //this is where the bait get thrown
+                    ThrowBait(); //throw the bait
                     Slider.SetActive(false);
-                    canCast = false;
-                    //render line
-         
-                }
             }
-            if(!canCast){ //is cancast is false, player can reel in
-                ReelIn();
+            if(PlayerMovement.Instance.fishstate == 3){ //state 3, player can reel in
+                    ReelIn();
             }
-        }//ends here
             if(startT){ //cooldown time start counting
-                timer+=Time.deltaTime;
-                canFish = false;
+                    timer+=Time.deltaTime;
             }
-            if(timer>3){  //is less than this time, player cannot cast again: cooldown time after reel in, regain fishing ability after cooldown time
-                canFish = true;
-                canCast = true; 
-                startT = false;
-                timer = 0;
+            if(timer>1){  //wait for time until going back to state 1: can cast again
+                    PlayerMovement.Instance.fishstate = 1; //return to original state
+                    startT = false;
+                    timer = 0;
             }
-        //Changing colors of power indicator bar:
-        if(power<25){
+        
+        if(power<25){   //Changing colors of power indicator bar:
             fill.GetComponent<Image>().color = new Color32(255, 25, 0, 255);  //red
         }else if(power>25&&power<50){
             fill.GetComponent<Image>().color = new Color32(255, 124, 0, 255);
@@ -123,13 +111,10 @@ public class Fishing : MonoBehaviour
             if(PlayerMovement.Instance.faceLeft==true){Target.transform.position= new Vector2(Target.transform.position.x-distance, Target.transform.position.y-0.5f);}
             if(PlayerMovement.Instance.faceRight==true){Target.transform.position= new Vector2(Target.transform.position.x+distance, Target.transform.position.y-0.5f);}
         hold = false;
-        canCast = false;
     }
     void ReelIn(){  //ReelIn function
-        if(Input.GetMouseButtonDown(0)){ 
             Target.transform.position = playerPos; //the bait goes back to player
             startT = true;
-            //deactivate line renderer
             power = 0; //reset power
             PlayerMovement.Instance.canMove = true;  //player can move again after reeling in
                 if(PlayerMovement.Instance.faceDown){
@@ -143,17 +128,10 @@ public class Fishing : MonoBehaviour
                 if(PlayerMovement.Instance.faceLeft || PlayerMovement.Instance.faceRight){
                     PlayerMovement.Instance.anim.SetBool("leftCast", false);
                     PlayerMovement.Instance.anim.SetBool("leftHit", true);
-                    //PlayerMovement.Instance.anim.SetBool("leftRaise", false);
                 }
-        }
-        
     }
     public float CalDistance(float x){
         float d = x/30;
         return d;
     }
-  
-
-
-  
 }
