@@ -16,13 +16,13 @@ public class ClickableArea : MonoBehaviour
     }
     void Update()
     {
-        this.transform.position = new Vector2(Player.transform.position.x, Player.transform.position.y+0.2491404f);   //still need a camera track
+        this.transform.position = new Vector2(Player.transform.position.x, Player.transform.position.y+1f);   //still need a camera track
     }
     void OnMouseDown() {
     }
     void OnMouseOver() {
         inField = true;
-        Debug.Log("inarea");
+        //Debug.Log("inarea");
     }
     void OnMouseExit()
     {

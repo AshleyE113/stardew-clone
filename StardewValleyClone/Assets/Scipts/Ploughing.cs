@@ -5,13 +5,12 @@ using UnityEngine;
 public class Ploughing : MonoBehaviour
 {
      public static Ploughing Instance;
-     public bool canDig;
    void Awake() {
         Instance = this;
     }
     void Start()
     {
-        canDig = false;
+        
     }
 
     void Update()

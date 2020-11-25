@@ -68,6 +68,7 @@ public class Fishing : MonoBehaviour
                        power+=1f;  
                     }//ends here
                     hold = true;
+                    PlayerMovement.Instance.canMove = false;
                 }
             }
             if(hold && PlayerMovement.Instance.fishstate == 2){ //holding mouse and state2

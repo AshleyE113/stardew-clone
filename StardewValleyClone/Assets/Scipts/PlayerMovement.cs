@@ -26,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove;
     public bool stateFishing;
     public int fishstate;
-     public bool stateFarming;
+    public bool stateFarming;
     public int farmstate;
     public bool addState;
-    public float timer;
+    public bool farmhit;
     
     void Awake() {
         Instance = this;
@@ -43,21 +43,18 @@ public class PlayerMovement : MonoBehaviour
         faceUp = false;
         faceDown = true;
         canMove = true;
-        StrRenderer.GetComponent<FishingLine>().enabled = false;
         Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = false;
         stateFishing = false;  //Fishingstate
         fishstate = 0;  //fishing state: determine steps of fishing
         stateFarming = false;  //FarmingState
         farmstate = 0;  //farming state: determine steps of farming
         addState = false;
-        timer = 0;
+        farmhit = false;
     }
-
      void FixedUpdate()
     {
         Vector2 velocity = rb.velocity;
         rb.velocity = new Vector2(movement.x * speed, movement.y* speed);  
-
     }
     void Update()
     {
@@ -136,6 +133,8 @@ public class PlayerMovement : MonoBehaviour
         }
         //deteact which direction is facing while clicking which input
         if(canMove){  //set whether player can move while fishing or farming
+        Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = false;
+        StrRenderer.GetComponent<LineRenderer>().enabled = false;
             if (Input.GetKey(rightKey))
             {
                 movement += Vector2.right;
@@ -185,7 +184,6 @@ public class PlayerMovement : MonoBehaviour
 
         if(fishstate ==1 && stateFarming==false &&ClickableArea.Instance.inField == true){   //Fishing Controls + Animation: if state is 1, not farming, click in field> do animation
                 if(Input.GetMouseButton(0)){
-                    canMove = false;
                 if(faceDown){
                     anim.SetBool("faceDown", false);
                     anim.SetBool("downRaise", true);
@@ -222,17 +220,19 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetBool("leftDig", true);
                 }
                 farmstate = 1;  //return to original state
+                canMove = true;
             }
     }
     void SwitchingFishState(){    //FishingState
             switch(fishstate){
                 case 1:
                     if(Input.GetMouseButtonUp(0)){ //mouseUp, do state 2 stuff
-                        StrRenderer.GetComponent<FishingLine>().enabled = true;
+                        StrRenderer.GetComponent<LineRenderer>().enabled = true;
                         fishstate = 2;  //move to next,  ==raise  ==2 
                     }
                 break;
                 case 2 :
+                    canMove = false;
                     if(faceDown){
                         anim.SetBool("downCast", true);
                         anim.SetBool("downRaise", false);
@@ -253,12 +253,16 @@ public class PlayerMovement : MonoBehaviour
                         fishstate = 3;
                     }
                 break;
+                case 3 :
+                    canMove = false;
+                break;
             }
     }
     void SwitchingFarmState(){    //FarmingState
          switch(farmstate){
             case 1:
                 if(Input.GetMouseButton(0)&&ClickableArea.Instance.inField == true){ 
+                    canMove = false;
                     farmstate = 2;
                 }
             break;
@@ -266,9 +270,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col) {   //Detect when player can cast
         if(col.gameObject.tag == "Bait"){
-//            Debug.Log("here");
-            canMove = true; //player can move after reeling in
-            if(Fishing.Instance.timer>3){ //cooldown time after reel in
+            if(Fishing.Instance.timer>1){ //cooldown time after reel in
+            canMove = true;
             }
             Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = false;
             StrRenderer.GetComponent<LineRenderer>().sortingOrder = 0;//changing sorting layer of the linerenderer;Player = 1;
@@ -276,8 +279,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D col) {
          if(col.gameObject.tag == "Bait"){
-           // Debug.Log("here");
-            canMove = false; //player cannot move while casting
+          Debug.Log("here");
+            //canMove = false; //player cannot move while casting
             if(Fishing.Instance.timer>3){ //cooldown time after reel in
             }
             Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = true;
