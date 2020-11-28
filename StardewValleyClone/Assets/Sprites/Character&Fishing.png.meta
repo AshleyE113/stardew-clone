@@ -1,0 +1,1139 @@
+fileFormatVersion: 2
+guid: 8c90178e70371477899068652bd745d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7384196037880417414
+    second: Character&Fishing_0
+  - first:
+      213: 3055704013706385884
+    second: Character&Fishing_1
+  - first:
+      213: -8512976550211511227
+    second: Character&Fishing_2
+  - first:
+      213: 2297826976165302699
+    second: Character&Fishing_3
+  - first:
+      213: 9114233453786524711
+    second: Character&Fishing_4
+  - first:
+      213: 8097766365559288429
+    second: Character&Fishing_5
+  - first:
+      213: 2952350034214970955
+    second: Character&Fishing_6
+  - first:
+      213: -9185227436248520013
+    second: Character&Fishing_7
+  - first:
+      213: -1661427735836343174
+    second: Character&Fishing_8
+  - first:
+      213: 4500259664166732416
+    second: Character&Fishing_9
+  - first:
+      213: 8029744013619572813
+    second: Character&Fishing_10
+  - first:
+      213: 7553714870327766075
+    second: Character&Fishing_11
+  - first:
+      213: 9119630870880855970
+    second: Character&Fishing_12
+  - first:
+      213: 7423996399275973213
+    second: Character&Fishing_13
+  - first:
+      213: 8624784685095832257
+    second: l1
+  - first:
+      213: 6999222463766183644
+    second: l2
+  - first:
+      213: -8788834750413182496
+    second: l3
+  - first:
+      213: 9033646470306151543
+    second: l4
+  - first:
+      213: 7238164550310183591
+    second: l5
+  - first:
+      213: 7553214853682561107
+    second: h1
+  - first:
+      213: 2137590766255304769
+    second: Character&Fishing_20
+  - first:
+      213: 4282627673034619652
+    second: Character&Fishing_21
+  - first:
+      213: 5682400931875001358
+    second: Character&Fishing_22
+  - first:
+      213: -1975072017760141944
+    second: Character&Fishing_23
+  - first:
+      213: 2060716227416045584
+    second: Character&Fishing_24
+  - first:
+      213: -1386740836516011479
+    second: Character&Fishing_25
+  - first:
+      213: -7446566167864614097
+    second: Character&Fishing_26
+  - first:
+      213: 2968415176926039953
+    second: Character&Fishing_27
+  - first:
+      213: 390920817281139384
+    second: Character&Fishing_0
+  - first:
+      213: -2348128119866984239
+    second: Character&Fishing_1
+  - first:
+      213: 7886156014726638858
+    second: Character&Fishing_2
+  - first:
+      213: 1277488718762678935
+    second: Character&Fishing_3
+  - first:
+      213: -3073555804815019242
+    second: Character&Fishing_4
+  - first:
+      213: 4993406176654535012
+    second: Character&Fishing_5
+  - first:
+      213: -7541541105279672410
+    second: Character&Fishing_6
+  - first:
+      213: -3967182874222612050
+    second: Character&Fishing_7
+  - first:
+      213: 5193491132250869671
+    second: Character&Fishing_8
+  - first:
+      213: -6801035744476152356
+    second: Character&Fishing_9
+  - first:
+      213: -403968331313070684
+    second: Character&Fishing_10
+  - first:
+      213: -842069341881791180
+    second: Character&Fishing_11
+  - first:
+      213: -6689236626372943014
+    second: Character&Fishing_12
+  - first:
+      213: 4784548158179454878
+    second: Character&Fishing_13
+  - first:
+      213: -7076116455504452193
+    second: l1
+  - first:
+      213: 3522961909368445788
+    second: l2
+  - first:
+      213: -6209567941733295515
+    second: l3
+  - first:
+      213: 4038785994190396703
+    second: l4
+  - first:
+      213: 4364130030119108414
+    second: l5
+  - first:
+      213: -5004302927027374769
+    second: h1
+  - first:
+      213: 8027564783095172740
+    second: Character&Fishing_20
+  - first:
+      213: -7906154231441163413
+    second: Character&Fishing_21
+  - first:
+      213: 1802936300745290951
+    second: Character&Fishing_22
+  - first:
+      213: 6712634139630997264
+    second: Character&Fishing_23
+  - first:
+      213: -5792552768620694958
+    second: Character&Fishing_24
+  - first:
+      213: -5209435494530636277
+    second: Character&Fishing_25
+  - first:
+      213: 6033102762150291672
+    second: Character&Fishing_26
+  - first:
+      213: -8980196437618254508
+    second: Character&Fishing_27
+  - first:
+      213: 1539925918810714969
+    second: Character&Fishing_28
+  - first:
+      213: -1116252484153133089
+    second: Character&Fishing_29
+  - first:
+      213: 2444516060486499899
+    second: Character&Fishing_30
+  - first:
+      213: -8858405681528330684
+    second: Character&Fishing_31
+  - first:
+      213: 3760841362439330740
+    second: Character&Fishing_32
+  - first:
+      213: -6753324940193449782
+    second: Character&Fishing_33
+  - first:
+      213: 7445432105003585397
+    second: Character&Fishing_34
+  - first:
+      213: 3361634667396096816
+    second: Character&Fishing_35
+  - first:
+      213: 4304418442996788252
+    second: Character&Fishing_36
+  - first:
+      213: 5629125911587260097
+    second: Character&Fishing_37
+  - first:
+      213: -7076116455504452193
+    second: Character&Fishing_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Character&Fishing_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 473
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b209518964dc6500800000000000000
+      internalID: 390920817281139384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8f8387ae5c96fd0800000000000000
+      internalID: -2348128119866984239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_2
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d671ddc11417d60800000000000000
+      internalID: 7886156014726638858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a1b66a83d8ab110800000000000000
+      internalID: 1277488718762678935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61339a8a7498855d0800000000000000
+      internalID: -3073555804815019242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_5
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4692cb226742c4540800000000000000
+      internalID: 4993406176654535012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_6
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af5cc05250175790800000000000000
+      internalID: -7541541105279672410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1b2f6e13cb1f8c0800000000000000
+      internalID: -3967182874222612050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_8
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 422
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af44f12bacf21840800000000000000
+      internalID: 5193491132250869671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_9
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 422
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddb3c9160edd91a0800000000000000
+      internalID: -6801035744476152356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 422
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adb39761f0d46af0800000000000000
+      internalID: -403968331313070684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_11
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 422
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d83e0256e5054f0800000000000000
+      internalID: -842069341881791180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_12
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.5000008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53228ababe0b23a0800000000000000
+      internalID: -6689236626372943014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_13
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.5000008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f29034331266240800000000000000
+      internalID: 4784548158179454878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: l1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f956c5813959ccd90800000000000000
+      internalID: -7076116455504452193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: l2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b532de03314e030800000000000000
+      internalID: 3522961909368445788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: l3
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a55505bde23d9a0800000000000000
+      internalID: -6209567941733295515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: l4
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d9a8b9676ac0830800000000000000
+      internalID: 4038785994190396703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: l5
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f3dd6e321809c30800000000000000
+      internalID: 4364130030119108414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: h1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45f51670052d8ab0800000000000000
+      internalID: -5004302927027374769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_20
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.4999984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ec2db63a3a76f60800000000000000
+      internalID: 8027564783095172740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_21
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.49999678}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b7f777d92b74290800000000000000
+      internalID: -7906154231441163413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_22
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.4999984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4749e5301550910800000000000000
+      internalID: 1802936300745290951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_23
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 373
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.7189716, y: 0.4999984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f8dd75f21182d50800000000000000
+      internalID: 6712634139630997264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_24
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 179
+        width: 45
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25278ab72f7bc9fa0800000000000000
+      internalID: -5792552768620694958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_25
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06a03cb40e54b7b0800000000000000
+      internalID: -5209435494530636277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_26
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d865675ff2e9b350800000000000000
+      internalID: 6033102762150291672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_27
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d198a4beeef5380800000000000000
+      internalID: -8980196437618254508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_28
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953312bd67aee5510800000000000000
+      internalID: 1539925918810714969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_29
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7b762a7464280f0800000000000000
+      internalID: -1116252484153133089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_30
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ef809c76aace120800000000000000
+      internalID: 2444516060486499899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_31
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 278
+        width: 101
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446a33c67fe901580800000000000000
+      internalID: -8858405681528330684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_32
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 451
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbdac81b41313430800000000000000
+      internalID: 3760841362439330740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_33
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 452
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8bbfe5fbe5742a0800000000000000
+      internalID: -6753324940193449782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_34
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f070a4d0d735760800000000000000
+      internalID: 7445432105003585397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_35
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03368c65bece6ae20800000000000000
+      internalID: 3361634667396096816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_36
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ca673a4cd5cbb30800000000000000
+      internalID: 4304418442996788252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character&Fishing_37
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 323
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c60b14313cae1e40800000000000000
+      internalID: 5629125911587260097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

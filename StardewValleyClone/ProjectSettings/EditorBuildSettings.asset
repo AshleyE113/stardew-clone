@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jason_TileTestGround.unity
     guid: dad37c66c9b79124d828025f53f35812
+  - enabled: 1
+    path: Assets/Scenes/Character.unity
+    guid: 9c48b1df33ebc4cd883b6c7a2e43b08c
   m_configObjects: {}
