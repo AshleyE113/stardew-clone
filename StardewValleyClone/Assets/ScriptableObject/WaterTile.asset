@@ -26,3 +26,4 @@ MonoBehaviour:
   Walkable: 0
   Seedable: 0
   Fishable: 1
+  InGridPosition: {x: 0, y: 0, z: 0}
