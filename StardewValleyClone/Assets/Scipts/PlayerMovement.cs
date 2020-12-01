@@ -301,6 +301,8 @@ public class PlayerMovement : MonoBehaviour
             Tilemap tmpmap = TileManager.tileManager.GroundTilemap;
             Vector3Int tmpcellpos = tmpmap.WorldToCell(transform.position+offset);
         var tmptile = tmpmap.GetTile(tmpcellpos);
+
+        TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);
         if(TileManager.tileManager.allTiles[tmptile].Seedable)
         {
             tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);

@@ -40,6 +40,8 @@ public class TileManager : MonoBehaviour
     //This function loads all the tile types into a dictionary
     private void GetAllTiles()
     {
+        GroundTilemap.CompressBounds();
+        Debug.Log(GroundTilemap.origin);
         allTiles = new Dictionary<TileBase, TileData>();
         foreach (var tileData in tileDatas)
         {
@@ -60,17 +62,19 @@ public class TileManager : MonoBehaviour
             }
         }
 
-        //foreach (var position in GroundTilemap.cellBounds.allPositionsWithin)
-        //{
-        //    //Debug.Log("Hey Imma trying new stuffs, the position is: "+ position + "The tile be: " +GroundTilemap.GetTile(position));
-        //    GameObject show = new GameObject();
-        //    //show.AddComponent<TextMeshProUGUI>();
-        //    show.name = position + "";
-        //    show.AddComponent<BoxCollider2D>();
-        //    show.transform.position = GroundTilemap.WorldToCell(position);
-        //    //show.GetComponent<TextMeshProUGUI>().text = "" + position;
-        //    //show.GetComponent<TextMeshProUGUI>().fontSize = 2;
-        //}
+        foreach (var position in GroundTilemap.cellBounds.allPositionsWithin)
+        {
+            Debug.Log(position);
+            //Debug.Log("Hey Imma trying new stuffs, the position is: "+ position + "The tile be: " +GroundTilemap.GetTile(position));
+            GameObject show = new GameObject();
+            //show.AddComponent<TextMeshProUGUI>();
+            show.name = position + "";
+            show.AddComponent<BoxCollider2D>();
+            show.transform.position = GroundTilemap.CellToWorld(position);
+            //show.GetComponent<TextMeshProUGUI>().text = "" + position;
+            //show.GetComponent<TextMeshProUGUI>().fontSize = 2;
+        }
+        Debug.Log(GroundTilemap.size);
     }
 
     //This is a function that will give a quick acess to a corresponding tile postion based on the world postion
@@ -78,14 +82,14 @@ public class TileManager : MonoBehaviour
     //Maybe I should add one for the tiledata later
 
     // 
-    public TileBase MatchTile(Vector3Int pos)
+    public TileBase MatchTile(Vector3 pos)
     {
         //Debug.Log(GroundTilemap.cellBounds);
         //Debug.Log("A "+GroundTilemap.cellBounds.allPositionsWithin);
         //return GroundTilemap.GetTile(GroundTilemap.WorldToCell(pos));
 
         var tmp_tile = GroundTilemap.GetTile(GroundTilemap.WorldToCell(pos));
-        Debug.Log("Seedable " + allTiles[tmp_tile].Seedable);
+        Debug.Log("Seedable " + allTiles[tmp_tile].Seedable + " Position: "+ GroundTilemap.WorldToCell(pos));
         return tmp_tile;
 
         //return GroundTilemap.WorldToCell(pos);
