@@ -234,7 +234,8 @@ public class PlayerMovement : MonoBehaviour
                 canMove = true;
             }
     }
-    void SwitchingFishState(){    //FishingState
+    //Modified by Jason
+    public void SwitchingFishState(){    //FishingState
             switch(fishstate){
                 case 1:
                     if(Input.GetMouseButtonUp(0)){ //mouseUp, do state 2 stuff
