@@ -2986,6 +2986,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7d163985a8471f4fbd6d5de5a66bc18, type: 2}
   - {fileID: 11400000, guid: 4ee158940e51ab546a9c1715a39f56dc, type: 2}
   - {fileID: 11400000, guid: e89576c0fb54b484b8fea1b81728de84, type: 2}
+  offset: {x: 0.5, y: 0.5, z: 0}
 --- !u!4 &839123245
 Transform:
   m_ObjectHideFlags: 0
@@ -5168,7 +5169,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &2041005910
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     public int farmstate;
     public bool addState;
     public bool farmhit;
+
+    //Added by Jason
+    public TileManager tileManager;
     
     void Awake() {
         Instance = this;
@@ -51,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
         farmstate = 0;  //farming state: determine steps of farming
         addState = false;
         farmhit = false;
+
+        //Added by Jason
+        tileManager = TileManager.tileManager;
     }
      void FixedUpdate()
     {
@@ -301,9 +307,11 @@ public class PlayerMovement : MonoBehaviour
             Tilemap tmpmap = TileManager.tileManager.GroundTilemap;
             Vector3Int tmpcellpos = tmpmap.WorldToCell(transform.position+offset);
         var tmptile = tmpmap.GetTile(tmpcellpos);
+        //Jason: I'll see if I have the time to optimize this mess
 
         TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);
-        if(TileManager.tileManager.allTiles[tmptile].Seedable)
+        //if(TileManager.tileManager.allTiles[tmptile].Seedable)
+        if(tileManager.CheckTheTile(tmpcellpos, tmpmap) == 1)
         {
             tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);
             tmpmap.SetColor(tmpcellpos, Color.black);
