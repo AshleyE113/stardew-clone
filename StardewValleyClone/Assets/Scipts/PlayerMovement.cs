@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     public int farmstate;
     public bool addState;
     public bool farmhit;
+
+    //Added by Jason
+    public TileManager tileManager;
     
     void Awake() {
         Instance = this;
@@ -50,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
         farmstate = 0;  //farming state: determine steps of farming
         addState = false;
         farmhit = false;
+
+        //Added by Jason
+        tileManager = TileManager.tileManager;
     }
      void FixedUpdate()
     {
@@ -206,24 +213,29 @@ public class PlayerMovement : MonoBehaviour
                 if(faceDown){
                     anim.SetBool("faceDown", false);
                     anim.SetBool("downDig", true);
+                    MarkTile(new Vector3(0,-0.6f,0));
                 }
                  if(faceUp){
                     anim.SetBool("faceUp", false);
                     anim.SetBool("upDig", true);
+                    MarkTile(new Vector3(0,0.6f,0));
                 }
-                 if(faceLeft ){
+                 if(faceLeft){
                     anim.SetBool("faceLeft", false);
                     anim.SetBool("leftDig", true);
+                    MarkTile(new Vector3(-0.6f,0,0));
                 }
                   if(faceRight){
                     anim.SetBool("faceLeft", false);
                     anim.SetBool("leftDig", true);
+                    MarkTile(new Vector3(0.6f,0,0));
                 }
                 farmstate = 1;  //return to original state
                 canMove = true;
             }
     }
-    void SwitchingFishState(){    //FishingState
+    //Modified by Jason
+    public void SwitchingFishState(){    //FishingState
             switch(fishstate){
                 case 1:
                     if(Input.GetMouseButtonUp(0)){ //mouseUp, do state 2 stuff
@@ -286,6 +298,26 @@ public class PlayerMovement : MonoBehaviour
             Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = true;
             StrRenderer.GetComponent<LineRenderer>().sortingOrder = 2; //changing sorting layer of the linerenderer;Player = 1;
         }
+    }
+
+    //This is Jason, I'm adding a checker function to link this player object with the tilemap
+    void MarkTile(Vector3 offset)
+    {
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+            Tilemap tmpmap = TileManager.tileManager.GroundTilemap;
+            Vector3Int tmpcellpos = tmpmap.WorldToCell(transform.position+offset);
+        var tmptile = tmpmap.GetTile(tmpcellpos);
+        //Jason: I'll see if I have the time to optimize this mess
+
+        TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);
+        //if(TileManager.tileManager.allTiles[tmptile].Seedable)
+        if(tileManager.CheckTheTile(tmpcellpos, tmpmap) == 1)
+        {
+            tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);
+            tmpmap.SetColor(tmpcellpos, Color.black);
+        }
+        //}
     }
 }
 
