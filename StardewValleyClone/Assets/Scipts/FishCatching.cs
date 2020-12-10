@@ -57,7 +57,7 @@ public class FishCatching : MonoBehaviour
     void Update()
     {
         //detect if the front tile is water, Jason is doing it
-            Debug.Log("h = "+h);
+//            Debug.Log("h = "+h);
             if(determine){
                 if(h<=1 && h>=0){ //0,1,2: have fish
                     hit = true;

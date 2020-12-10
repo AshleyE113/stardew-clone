@@ -369,7 +369,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 159659008}
-  - component: {fileID: 159659009}
   m_Layer: 9
   m_Name: FarmingManager
   m_TagString: Untagged
@@ -391,18 +390,6 @@ Transform:
   m_Father: {fileID: 1860303815}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &159659009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159659007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f777cfed57d441ae84ca2fc1b1a8f1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &162549905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1329,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 586288661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3c1643f88043489a9dae85e2804854e, type: 3}
+  m_Script: {fileID: 11500000, guid: fe4a86f013429994e851c7c0b4052126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerbar: {fileID: 142408677}
@@ -1354,10 +1341,11 @@ MonoBehaviour:
   Player: {fileID: 1860303812}
   brb: {fileID: 162549908}
   Target: {fileID: 1214264983}
-  speed: 5
-  thrust: 5
+  speed: 6
+  thrust: 0
   hold: 0
   timer: 0
+  State: 0
 --- !u!4 &586288663
 Transform:
   m_ObjectHideFlags: 0
@@ -2111,7 +2099,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &953576384
@@ -2635,7 +2623,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1250999626
@@ -2673,7 +2661,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1250999623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282f3c8d05f1740f88870e441d9326af, type: 3}
+  m_Script: {fileID: 11500000, guid: 240370b8c110fff48abb0c2d3208997c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inField: 0
@@ -2837,12 +2825,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278428706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4719b5a7cdeb443ceac3152766a39023, type: 3}
+  m_Script: {fileID: 11500000, guid: d165b9b21c8d21045ae7e90cb3cba369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rodTip: {fileID: 2105730981}
-  baitPt: {fileID: 162549905}
-  lineWidth: 0.02
+  baitPt: {fileID: 1756296081}
+  lineWidth: 0.01
 --- !u!1 &1310936615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,14 +4183,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1860303812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67b6d0d98350a4d9687f7f190049b57b, type: 3}
+  m_Script: {fileID: 11500000, guid: a0f537f4f7221aa4c9d3c48901620478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   StrRenderer: {fileID: 1278428706}
-  UI: {fileID: 142408675}
-  Player: {fileID: 0}
-  speed: 4
+  UI: {fileID: 179915254}
+  Player: {fileID: 1860303812}
+  speed: 5
   rb: {fileID: 0}
   leftKey: 97
   rightKey: 100
@@ -4219,6 +4207,7 @@ MonoBehaviour:
   farmstate: 0
   addState: 0
   farmhit: 0
+  tileManager: {fileID: 0}
 --- !u!95 &1860303819
 Animator:
   serializedVersion: 3
@@ -4599,12 +4588,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1985214353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9ed861c4afd4884b584da4ecc87f01, type: 3}
+  m_Script: {fileID: 11500000, guid: 06daefe91c26ad94abe4faae25d97744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTimeY: 0.3
-  smoothTimeX: 0.3
-  Player: {fileID: 1860303812}
+  smoothTimeY: 0
+  smoothTimeX: 0
+  Player: {fileID: 0}
 --- !u!1 &2050835872
 GameObject:
   m_ObjectHideFlags: 0
