@@ -77,7 +77,7 @@ public class Fishing : MonoBehaviour
             }
             if(hold && PlayerMovement.Instance.fishstate == 2){ //holding mouse and state2
                     finalValue = power;
-                    Debug.Log(finalValue); //take the y of mousepos
+                    Debug.Log("yes"); //take the y of mousepos
                     Bait.SetActive(true);
                     ThrowBait(); //throw the bait
                     Slider.SetActive(false);
