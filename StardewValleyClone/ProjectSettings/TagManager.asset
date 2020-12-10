@@ -46,3 +46,6 @@ TagManager:
   - name: String
     uniqueID: 1327463013
     locked: 0
+  - name: UI
+    uniqueID: 2367712799
+    locked: 0
