@@ -14,22 +14,30 @@ public class ToPlant : MonoBehaviour
     public bool inHere;
     public Sprite[] Plant1;
     public float Start_Time = 40;
+
     //private int plant_index = 0;
 
-    WaitForSeconds delay = new WaitForSeconds(5f);
-    
+    WaitForSeconds delay = new WaitForSeconds(3f);
+    ArrayList Inventory = new ArrayList();
 
     ///*
     void Start()
     {
         readyToHarvest = false;
-        inHere = false;       
+        inHere = false;  
     }
     //*/
 
     private void OnMouseDown()
     {
         isDragging = true; 
+        
+        if (readyToHarvest == true)
+        {
+            Debug.Log("Ready to reap!");
+            Seeds.SetActive(false);
+            Inventory.Add(Plant1[Plant1.Length-1]);
+        }
     }
 
     //Gets te mouse's position in the game scene
@@ -50,15 +58,11 @@ public class ToPlant : MonoBehaviour
         {
             StartCoroutine(ShowGrowth());
         }
+
     } 
 
     IEnumerator ShowGrowth()
     {
-        /*Destroy(Plant1[plant_index++]);
-        if (plant_index < Plant1.Length)
-        {
-            Invoke("ShowGrowth", 5f);
-        }*/
         inHere = true;
         for (int i = 0; i < Plant1.Length; i++)
         {
@@ -74,15 +78,14 @@ public class ToPlant : MonoBehaviour
                 break;
             }
             
-            /* if (Start_Time % 5 == 0)
-            {
-                Debug.Log("In if");
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = Plant1[i];
-            } */
+
             
         }
 
     }
+
+        
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
