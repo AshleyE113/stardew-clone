@@ -316,6 +316,7 @@ public class PlayerMovement : MonoBehaviour
         {
             tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);
             tmpmap.SetColor(tmpcellpos, Color.black);
+            PlantManager.plantManager.GeneratePlant(tmpmap.CellToWorld(tmpcellpos)+ new Vector3(.5f,.5f,0));
         }
         //}
     }
