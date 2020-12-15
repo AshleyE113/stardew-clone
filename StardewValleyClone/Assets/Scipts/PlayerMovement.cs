@@ -312,8 +312,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //This is Jason, I'm adding a checker function to link this player object with the tilemap
-    // void MarkTile(Vector3 offset)
-    // {
+     void MarkTile(Vector3 offset)
+    {
     //     //if (Input.GetKeyDown(KeyCode.Space))
     //     //{
     //         Tilemap tmpmap = TileManager.tileManager.GroundTilemap;
@@ -321,6 +321,16 @@ public class PlayerMovement : MonoBehaviour
     //     var tmptile = tmpmap.GetTile(tmpcellpos);
     //     //Jason: I'll see if I have the time to optimize this mess
 
+        TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);
+        //if(TileManager.tileManager.allTiles[tmptile].Seedable)
+        if(tileManager.CheckTheTile(tmpcellpos, tmpmap) == 1)
+        {
+            tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);
+            tmpmap.SetColor(tmpcellpos, Color.black);
+            PlantManager.plantManager.GeneratePlant(tmpmap.CellToWorld(tmpcellpos)+ new Vector3(.5f,.5f,0));
+        }
+        //}
+    }
     //     TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);
     //     //if(TileManager.tileManager.allTiles[tmptile].Seedable)
     //     if(tileManager.CheckTheTile(tmpcellpos, tmpmap) == 1)
