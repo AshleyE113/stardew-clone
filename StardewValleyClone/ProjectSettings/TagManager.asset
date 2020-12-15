@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Bait
   - 'Clickable '
-  - Seed
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -18,9 +18,9 @@ TagManager:
   - 
   - Tip
   - Player
-  - 
-  - 
-  - 
+  - BG
+  - Manager
+  - Confiner
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3104126845
     locked: 0
   - name: String
     uniqueID: 1327463013

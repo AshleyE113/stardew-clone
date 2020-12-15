@@ -100,17 +100,17 @@ public class TileManager : MonoBehaviour
     }
 
     //This will create an actual game object which contains a boxcollider that resembles the tile size
-    public void CreateCollisionTile(Vector3Int position)
+    public void CreateCollisionTile(Vector3Int position)   //this part affect clicking
     {
-        GameObject box = new GameObject();
-        box.name = position + "";
-        box.AddComponent<BoxCollider2D>();
-        if (CheckTheTile(position, GroundTilemap) != 0)
-        {
-            //If the tile is not water, player can walk through it
-            box.GetComponent<BoxCollider2D>().isTrigger = true;
-        }
-        box.transform.position = GroundTilemap.CellToWorld(position) + offset;
+        // GameObject box = new GameObject();
+        // box.name = position + "";
+        // box.AddComponent<BoxCollider2D>();
+        // if (CheckTheTile(position, GroundTilemap) != 0)
+        // {
+        //     //If the tile is not water, player can walk through it
+        //     box.GetComponent<BoxCollider2D>().isTrigger = true;
+        // }
+        // box.transform.position = GroundTilemap.CellToWorld(position) + offset;
     }
 
     //Check if the tile is collidable
