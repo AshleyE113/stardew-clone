@@ -16,15 +16,18 @@ public class ToPlant : MonoBehaviour
     public float Start_Time = 40;
 
     //private int plant_index = 0;
-
+    private SimpleInvent inventory;
     WaitForSeconds delay = new WaitForSeconds(3f);
-    ArrayList Inventory = new ArrayList();
+    //ArrayList Inventory = new ArrayList();
 
     ///*
+
+    //Put tag on mouse
     void Start()
     {
         readyToHarvest = false;
-        inHere = false;  
+        inHere = false; 
+        inventory = GameObject.FindGameObjectWithTag("Seed").GetComponent<SimpleInvent>();
     }
     //*/
 
@@ -35,8 +38,17 @@ public class ToPlant : MonoBehaviour
         if (readyToHarvest == true)
         {
             Debug.Log("Ready to reap!");
-            Seeds.SetActive(false);
-            Inventory.Add(Plant1[Plant1.Length-1]);
+            //Seeds.SetActive(false);
+            for (int i = 0; i < inventory.Slots.Length; i++)
+            {
+                if (inventory.isFull[i] == false)
+                {
+                    Debug.Log("Reaping time!");
+                    inventory.isFull[i] = true;
+                    break;
+                }
+            }
+            //Inventory.Add(Plant1[Plant1.Length-1]);
         }
     }
 
@@ -50,11 +62,11 @@ public class ToPlant : MonoBehaviour
     {
         //Commented out by Jason
         //Jason: In SDV this is not done by dragging but pressing buttons while selecting on the seed in inventroy
-        //if (isDragging)
-        //{
-        //    Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        //    transform.Translate(mousePosition);
-        //}
+        if (isDragging)
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePosition);
+        }
 
         if (OnLand == true && readyToHarvest == false && inHere == false)
         {

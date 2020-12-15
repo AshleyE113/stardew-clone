@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bait
   - 'Clickable '
+  - Seed
   layers:
   - Default
   - TransparentFX
