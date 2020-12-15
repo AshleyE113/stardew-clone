@@ -40,19 +40,24 @@ public class ToPlant : MonoBehaviour
 
     void Update()
     {
-        if (isDragging)
-        {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            transform.Translate(mousePosition);
-        }
+        //Commented out by Jason
+        //Jason: In SDV this is not done by dragging but pressing buttons while selecting on the seed in inventroy
+        //if (isDragging)
+        //{
+        //    Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        //    transform.Translate(mousePosition);
+        //}
 
-        if (OnLand == true && readyToHarvest == false && inHere == false)
-        {
-            StartCoroutine(ShowGrowth());
-        }
+        //if (OnLand == true && readyToHarvest == false && inHere == false && !isDragging)
+        //{
+        //    StartCoroutine(ShowGrowth());
+        //}
+        //This will instantly play when it's generated
+        StartCoroutine(ShowGrowth());
     } 
 
-    IEnumerator ShowGrowth()
+    //Mod by Jason
+    public IEnumerator ShowGrowth()
     {
         /*Destroy(Plant1[plant_index++]);
         if (plant_index < Plant1.Length)
