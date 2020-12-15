@@ -48,11 +48,13 @@ public class ToPlant : MonoBehaviour
 
     void Update()
     {
-        if (isDragging)
-        {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            transform.Translate(mousePosition);
-        }
+        //Commented out by Jason
+        //Jason: In SDV this is not done by dragging but pressing buttons while selecting on the seed in inventroy
+        //if (isDragging)
+        //{
+        //    Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        //    transform.Translate(mousePosition);
+        //}
 
         if (OnLand == true && readyToHarvest == false && inHere == false)
         {
@@ -61,7 +63,8 @@ public class ToPlant : MonoBehaviour
 
     } 
 
-    IEnumerator ShowGrowth()
+    //Mod by Jason
+    public IEnumerator ShowGrowth()
     {
         inHere = true;
         for (int i = 0; i < Plant1.Length; i++)

@@ -130,4 +130,5 @@ public class TileManager : MonoBehaviour
             return 2;
         }
     }
+    //Make note here
 }
