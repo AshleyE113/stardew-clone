@@ -114,7 +114,7 @@ public class Fishing : MonoBehaviour
     void ThrowBait(){   //cast out the bait into the water, can do tile checking here inside this function!!
         Bait.transform.LookAt(mousePos);
         distance = CalDistance(finalValue);  //calculate available distance from casting strength
-        Debug.Log(distance);
+//        Debug.Log(distance);
         //change throw direction according to face direction
             if(PlayerMovement.Instance.faceDown==true){Target.transform.position= new Vector2(Target.transform.position.x, Target.transform.position.y-distance);}
             if(PlayerMovement.Instance.faceUp==true){Target.transform.position= new Vector2(Target.transform.position.x, Target.transform.position.y+distance);}
@@ -123,13 +123,14 @@ public class Fishing : MonoBehaviour
         hold = false;
 
         //Added by Jason
-        CheckTileFishable();
+        //CheckTileFishable(); later uncomment
     }
     void ReelIn(){  //ReelIn function
             Target.transform.position = playerPos; //the bait goes back to player
             startT = true;
             power = 0; //reset power
             PlayerMovement.Instance.canMove = true;  //player can move again after reeling in
+            FishCatching.Instance.Reset();
                 if(PlayerMovement.Instance.faceDown){
                     PlayerMovement.Instance.anim.SetBool("downCast", false);
                     PlayerMovement.Instance.anim.SetBool("downHit", true);
@@ -151,16 +152,16 @@ public class Fishing : MonoBehaviour
     //Added by Jason
     //This is a function dedicated to check the tile, the Debug.Log() will get called whenever the target object hits a non-water tile
     //However I am confused why it won't return to the idle animation state, I'll need to take a closer look at how the animation was managed here 
-    public void CheckTileFishable()
-    {
-        var tmp_tm = TileManager.tileManager;
-        var tmp_pm = PlayerMovement.Instance;
-        if (tmp_tm.CheckTheTile(Vector3Int.RoundToInt(Target.transform.position), tmp_tm.GroundTilemap) != 0)
-        {
-            //tmp_pm.SwitchingFishState();
-            //tmp_pm.anim.SetBool("downCast");
-            //tmp_pm.fishstate = 3;
-            Debug.Log("This tile is not fishable!");
-        }
-    }
+    // public void CheckTileFishable()
+    // {
+    //     var tmp_tm = TileManager.tileManager;
+    //     var tmp_pm = PlayerMovement.Instance;
+    //     if (tmp_tm.CheckTheTile(Vector3Int.RoundToInt(Target.transform.position), tmp_tm.GroundTilemap) != 0)
+    //     {
+    //         //tmp_pm.SwitchingFishState();
+    //         //tmp_pm.anim.SetBool("downCast");
+    //         //tmp_pm.fishstate = 3;
+    //         Debug.Log("This tile is not fishable!");
+    //     }
+    // }
 }

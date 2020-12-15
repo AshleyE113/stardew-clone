@@ -1277,7 +1277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576252218}
   m_Layer: 5
-  m_Name: Green
+  m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1485073336}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -2021,6 +2021,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849645569}
   m_CullTransparentMesh: 0
+--- !u!1 &901945528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901945529}
+  m_Layer: 9
+  m_Name: CaughtFish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901945529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901945528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 1.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1860303815}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &901966054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,7 +2216,7 @@ GameObject:
   - component: {fileID: 980946548}
   - component: {fileID: 980946547}
   m_Layer: 5
-  m_Name: Handle
+  m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2395,7 +2425,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1280697595}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2406,12 +2437,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199462526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e52885cc61bf413a9851c434c069c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baitAnim: {fileID: 2050835875}
+  Target: {fileID: 0}
   L1FishType:
   - {fileID: 2841328269708409293, guid: 04ff9effaee544e2bbc92389e320e881, type: 3}
   - {fileID: 1894699415994657955, guid: 1e99d4235be5d4e2d9f5b810ad86bc48, type: 3}
@@ -2425,18 +2457,29 @@ MonoBehaviour:
   - {fileID: 8760828327346881578, guid: 419cd204c48d44a539ce3a70e029c4dd, type: 3}
   - {fileID: 5945279006658434168, guid: 87bf2991da3004aca9ec9fef1fa215e7, type: 3}
   FishCatchIndicator: {fileID: 1390211398}
+  HoeButton: {fileID: 0}
   Side: {fileID: 747391541}
   fill: {fileID: 1715771284}
+  greenBox: {fileID: 0}
   Main: {fileID: 1615240425}
+  Indicator: {fileID: 0}
+  greenRect: {fileID: 0}
+  fishIconRect: {fileID: 0}
+  FishingBar: {fileID: 0}
+  Bubble: {fileID: 0}
   n: 0
   h: 0
   timer: 0
   fishingTime: 0
   greenPos: 0
-  currentPos: 0
+  fishIconPos: 0
+  currentfishIconPos: 0
   hit: 0
+  determine: 0
   startTime: 0
+  catching: 0
   CaughtFish: []
+  CaptureFish: {fileID: 0}
   currentFishType: 0
 --- !u!1 &1214264983
 GameObject:
@@ -2831,6 +2874,88 @@ MonoBehaviour:
   rodTip: {fileID: 2105730981}
   baitPt: {fileID: 1756296081}
   lineWidth: 0.01
+--- !u!1 &1280697594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1280697595}
+  - component: {fileID: 1280697596}
+  m_Layer: 0
+  m_Name: FishCatching
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1280697595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280697594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1199462528}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280697596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280697594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e52885cc61bf413a9851c434c069c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baitAnim: {fileID: 2050835875}
+  Target: {fileID: 1214264983}
+  L1FishType:
+  - {fileID: 2841328269708409293, guid: 04ff9effaee544e2bbc92389e320e881, type: 3}
+  - {fileID: 1894699415994657955, guid: 1e99d4235be5d4e2d9f5b810ad86bc48, type: 3}
+  - {fileID: 4017368626912241536, guid: 8e27c842181f846a48b00c8388011243, type: 3}
+  - {fileID: 7363897619282695110, guid: cb9e3a0a6bf3248cc9e4ae62c54f7068, type: 3}
+  - {fileID: 5847313876814634974, guid: d046b9489f1b2418eaa5a2888b8a7888, type: 3}
+  L2FishType:
+  - {fileID: 8733050142200135098, guid: f5305d45d82534e4ab1e00e5b61e315a, type: 3}
+  - {fileID: 3481464859929789184, guid: 1950a549160fe47b2af89707cc7222a1, type: 3}
+  TrashType:
+  - {fileID: 8760828327346881578, guid: 419cd204c48d44a539ce3a70e029c4dd, type: 3}
+  - {fileID: 5945279006658434168, guid: 87bf2991da3004aca9ec9fef1fa215e7, type: 3}
+  FishCatchIndicator: {fileID: 1390211398}
+  HoeButton: {fileID: 740769755}
+  Side: {fileID: 747391541}
+  fill: {fileID: 1715771284}
+  greenBox: {fileID: 980946547}
+  Main: {fileID: 1615240425}
+  Indicator: {fileID: 828325174}
+  greenRect: {fileID: 980946546}
+  fishIconRect: {fileID: 1485073336}
+  FishingBar: {fileID: 1390211398}
+  Bubble: {fileID: 1697727757}
+  n: 0
+  h: 0
+  timer: 0
+  fishingTime: 0
+  greenPos: 0
+  fishIconPos: 0
+  currentfishIconPos: 0
+  hit: 0
+  determine: 0
+  startTime: 0
+  catching: 0
+  CaughtFish: []
+  CaptureFish: {fileID: 901945528}
+  currentFishType: 0
 --- !u!1 &1310936615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,7 +3324,7 @@ GameObject:
   - component: {fileID: 1485073338}
   - component: {fileID: 1485073337}
   m_Layer: 5
-  m_Name: Fish
+  m_Name: FishIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4134,6 +4259,7 @@ Transform:
   - {fileID: 586288663}
   - {fileID: 159659008}
   - {fileID: 1250999624}
+  - {fileID: 901945529}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4188,8 +4314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   StrRenderer: {fileID: 1278428706}
-  UI: {fileID: 179915254}
+  UI: {fileID: 142408675}
   Player: {fileID: 1860303812}
+  FC: {fileID: 1280697594}
   speed: 5
   rb: {fileID: 0}
   leftKey: 97
@@ -4456,9 +4583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49342ee4750449d2844cca956c0b49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StrRenderer: {fileID: 1278428706}
-  anim: {fileID: 1860303819}
-  Player: {fileID: 1860303812}
 --- !u!1 &1965162924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,6 +4880,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clam
       objectReference: {fileID: 0}
+    - target: {fileID: 3481464859929789184, guid: 1950a549160fe47b2af89707cc7222a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5913674472768001439, guid: 1950a549160fe47b2af89707cc7222a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4880,6 +5009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 7363897619282695110, guid: cb9e3a0a6bf3248cc9e4ae62c54f7068,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb9e3a0a6bf3248cc9e4ae62c54f7068, type: 3}
 --- !u!1001 &1585509070279733155
@@ -4948,6 +5082,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Seaweed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760828327346881578, guid: 419cd204c48d44a539ce3a70e029c4dd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 419cd204c48d44a539ce3a70e029c4dd, type: 3}
@@ -5018,6 +5157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puff
       objectReference: {fileID: 0}
+    - target: {fileID: 8733050142200135098, guid: f5305d45d82534e4ab1e00e5b61e315a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5305d45d82534e4ab1e00e5b61e315a, type: 3}
 --- !u!1001 &2164703082097693380
@@ -5031,6 +5175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: F1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894699415994657955, guid: 1e99d4235be5d4e2d9f5b810ad86bc48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5979464228371127882, guid: 1e99d4235be5d4e2d9f5b810ad86bc48,
         type: 3}
@@ -5101,6 +5250,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2841328269708409293, guid: 04ff9effaee544e2bbc92389e320e881,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841328269708409295, guid: 04ff9effaee544e2bbc92389e320e881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5169,6 +5323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: F1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847313876814634974, guid: d046b9489f1b2418eaa5a2888b8a7888,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6481131783216385736, guid: d046b9489f1b2418eaa5a2888b8a7888,
         type: 3}
@@ -5294,6 +5453,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash
       objectReference: {fileID: 0}
+    - target: {fileID: 5945279006658434168, guid: 87bf2991da3004aca9ec9fef1fa215e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87bf2991da3004aca9ec9fef1fa215e7, type: 3}
 --- !u!1001 &4857874500186852310
@@ -5362,6 +5526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: F1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017368626912241536, guid: 8e27c842181f846a48b00c8388011243,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e27c842181f846a48b00c8388011243, type: 3}
