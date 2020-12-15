@@ -926,7 +926,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4241,7 +4241,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.408
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4376,7 +4376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &446691872
 Transform:
   m_ObjectHideFlags: 0
@@ -5291,7 +5291,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -9287,7 +9287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510297754}
   - component: {fileID: 510297753}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Confiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9787,7 +9787,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -24571,7 +24571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -69.753, y: 54.325928}
+  m_AnchoredPosition: {x: 217, y: 54.325928}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740769757
@@ -24833,7 +24833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764618899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 26.46, y: 7.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920684404}
@@ -24875,7 +24875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -23.122, y: 54.325928}
+  m_AnchoredPosition: {x: 263.63095, y: 54.325928}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812461453
@@ -25206,7 +25206,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 11ae0633d9aba4893b96aae37d237fad, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.91
   m_Pitch: 1.15
   Loop: 0
@@ -26168,8 +26168,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1927254497
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 597174ac915f04118af0e3cad12bf882, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -27055,7 +27055,8 @@ GameObject:
   - component: {fileID: 1521102956}
   - component: {fileID: 1521102955}
   - component: {fileID: 1521102958}
-  m_Layer: 0
+  - component: {fileID: 1521102959}
+  m_Layer: 12
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -27142,7 +27143,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0032744, y: -8.471786}
+  m_Offset: {x: -2.0032744, y: -6.146554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -27153,7 +27154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.805778, y: 5.0913467}
+  m_Size: {x: 15.805778, y: 0.44088364}
   m_EdgeRadius: 0
 --- !u!114 &1521102958
 MonoBehaviour:
@@ -27162,12 +27163,38 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521102953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a49342ee4750449d2844cca956c0b49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1860303812}
+--- !u!61 &1521102959
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521102953}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.6551094, y: -8.947028}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.20714378, y: 5.637371}
+  m_EdgeRadius: 0
 --- !u!1 &1549055488
 GameObject:
   m_ObjectHideFlags: 0
@@ -27933,7 +27960,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 3055704013706385884, guid: 8c90178e70371477899068652bd745d4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -27954,7 +27981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860303812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 26.46, y: 7.02, z: 0}
   m_LocalScale: {x: 4.0138, y: 4.0138, z: 4.0138}
   m_Children:
   - {fileID: 1962491052}
@@ -28399,8 +28426,9 @@ GameObject:
   - component: {fileID: 1978590064}
   - component: {fileID: 1978590063}
   - component: {fileID: 1978590065}
-  m_Layer: 0
-  m_Name: Edge
+  - component: {fileID: 1978590066}
+  m_Layer: 12
+  m_Name: Detectedge
   m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28433,7 +28461,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.7358398, y: -7.499505}
+  m_Offset: {x: -4.4892015, y: -5.0898676}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -28444,7 +28472,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 22.291473, y: 6.256651}
+  m_Size: {x: 20.78475, y: 1.437376}
   m_EdgeRadius: 0
 --- !u!61 &1978590064
 BoxCollider2D:
@@ -28459,7 +28487,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.8818417, y: 3.6407886}
+  m_Offset: {x: -2.6409426, y: 3.6407886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -28470,7 +28498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.4617214, y: 3.5918045}
+  m_Size: {x: 4.9435196, y: 3.5918045}
   m_EdgeRadius: 0
 --- !u!114 &1978590065
 MonoBehaviour:
@@ -28479,12 +28507,38 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978590061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a49342ee4750449d2844cca956c0b49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1860303812}
+--- !u!61 &1978590066
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978590061}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.4, y: -7.7705}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.896925, y: 3.2843132}
+  m_EdgeRadius: 0
 --- !u!1 &1983959804
 GameObject:
   m_ObjectHideFlags: 0
@@ -28611,7 +28665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985214353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 26.46, y: 7.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

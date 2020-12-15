@@ -267,7 +267,7 @@ public class PlayerMovement : MonoBehaviour
                         anim.SetBool("leftCast", true);
                         anim.SetBool("leftRaise", false);
                     }
-                    if(Input.GetMouseButtonDown(0)){  //if click while state 2, change to state3, need determine if hit a fish set a bool frm another script or sth 
+                    if(Input.GetMouseButtonDown(0)&&ClickableArea.Instance.inField == true){  //if click while state 2, change to state3, need determine if hit a fish set a bool frm another script or sth 
                         fishstate = 3;
                     }
                     // if(!Detection.Instance.inWater){
