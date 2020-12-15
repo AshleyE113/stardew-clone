@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,11 +29,11 @@ public class Fishing : MonoBehaviour
     // public bool canCast;
     bool startT;
     public float timer;
-    // public bool canFish;
     bool decrease;
 
     //Added by Jason
     public int State;
+    //public TileManager tileManager;
     void Awake() {
         Instance = this;
     }
@@ -47,6 +47,7 @@ public class Fishing : MonoBehaviour
         Slider.SetActive(false);
         timer = 0;
         startT = false;
+        //tileManager = TileManager.tileManager;
     }
 
     void Update()
@@ -81,9 +82,9 @@ public class Fishing : MonoBehaviour
                     Bait.SetActive(true);
                     ThrowBait(); //throw the bait
                     Slider.SetActive(false);
-
+                    //timer2+=Time.deltaTime;
                     //Added by Jason
-                    //CheckTileFishable();
+                    CheckTileFishable(); //already in side throw bait
             }
             if(PlayerMovement.Instance.fishstate == 3){ //state 3, player can reel in
                     ReelIn();
@@ -94,7 +95,7 @@ public class Fishing : MonoBehaviour
             if(timer>1){  //wait for time until going back to state 1: can cast again
                     PlayerMovement.Instance.fishstate = 1; //return to original state
                     startT = false;
-                    timer = 0;
+                    timer = 0;    
             }
         
         if(power<25){   //Changing colors of power indicator bar:
@@ -114,7 +115,7 @@ public class Fishing : MonoBehaviour
     void ThrowBait(){   //cast out the bait into the water, can do tile checking here inside this function!!
         Bait.transform.LookAt(mousePos);
         distance = CalDistance(finalValue);  //calculate available distance from casting strength
-        Debug.Log(distance);
+//        Debug.Log(distance);
         //change throw direction according to face direction
             if(PlayerMovement.Instance.faceDown==true){Target.transform.position= new Vector2(Target.transform.position.x, Target.transform.position.y-distance);}
             if(PlayerMovement.Instance.faceUp==true){Target.transform.position= new Vector2(Target.transform.position.x, Target.transform.position.y+distance);}
@@ -123,13 +124,14 @@ public class Fishing : MonoBehaviour
         hold = false;
 
         //Added by Jason
-        CheckTileFishable();
+       // CheckTileFishable(); //later uncomment
     }
     void ReelIn(){  //ReelIn function
             Target.transform.position = playerPos; //the bait goes back to player
             startT = true;
             power = 0; //reset power
             PlayerMovement.Instance.canMove = true;  //player can move again after reeling in
+            FishCatching.Instance.Reset();
                 if(PlayerMovement.Instance.faceDown){
                     PlayerMovement.Instance.anim.SetBool("downCast", false);
                     PlayerMovement.Instance.anim.SetBool("downHit", true);
@@ -157,7 +159,7 @@ public class Fishing : MonoBehaviour
         var tmp_pm = PlayerMovement.Instance;
         if (tmp_tm.CheckTheTile(Vector3Int.RoundToInt(Target.transform.position), tmp_tm.GroundTilemap) != 0)
         {
-            //tmp_pm.SwitchingFishState();
+            //tmp_pm.SwitchingFishState();   //this part have problem
             //tmp_pm.anim.SetBool("downCast");
             //tmp_pm.fishstate = 3;
             Debug.Log("This tile is not fishable!");
