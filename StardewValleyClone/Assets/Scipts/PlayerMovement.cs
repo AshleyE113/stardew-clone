@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject StrRenderer;
     public GameObject UI;  //powerbar
     public GameObject Player;
-    public GameObject FC; //FishCatching Object
+    //public GameObject FC; //FishCatching Object
     [Header("Physics")]
     public float speed;
     public Rigidbody2D rb;
@@ -55,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         farmstate = 0;  //farming state: determine steps of farming
         addState = false;
         farmhit = false;
-        //FC.SetActive(false);
 
         //Added by Jason
         tileManager = TileManager.tileManager;
@@ -215,22 +214,22 @@ public class PlayerMovement : MonoBehaviour
                 if(faceDown){
                     anim.SetBool("faceDown", false);
                     anim.SetBool("downDig", true);
-                    //MarkTile(new Vector3(0,-0.6f,0)); later uncomment
+                    MarkTile(new Vector3(0,-0.6f,0)); //later uncomment
                 }
                  if(faceUp){
                     anim.SetBool("faceUp", false);
                     anim.SetBool("upDig", true);
-                    //MarkTile(new Vector3(0,0.6f,0));
+                    MarkTile(new Vector3(0,0.6f,0));
                 }
                  if(faceLeft){
                     anim.SetBool("faceLeft", false);
                     anim.SetBool("leftDig", true);
-                    //MarkTile(new Vector3(-0.6f,0,0));
+                    MarkTile(new Vector3(-0.6f,0,0));
                 }
                   if(faceRight){
                     anim.SetBool("faceLeft", false);
                     anim.SetBool("leftDig", true);
-                    //MarkTile(new Vector3(0.6f,0,0));
+                    MarkTile(new Vector3(0.6f,0,0));
                 }
                 farmstate = 1;  //return to original state
                 canMove = true;
@@ -240,17 +239,17 @@ public class PlayerMovement : MonoBehaviour
     public void SwitchingFishState(){    //FishingState
             switch(fishstate){
                 case 1:
-                //FC.SetActive(false);
                     if(Input.GetMouseButtonUp(0)){ //mouseUp, do state 2 stuff
                         StrRenderer.GetComponent<LineRenderer>().enabled = true;
                         fishstate = 2;  //move to next,  ==raise  ==2 
                         FishCatching.Instance.h = Random.Range(1,5); //working
-                        //Debug.Log(FishCatching.Instance.h);
+                        Debug.Log(FishCatching.Instance.h);
+                        //if(Detection.Instance.inWater){
                         FishCatching.Instance.determine = true;
+                        //}
                     }
                 break;
                 case 2 :
-                //FC.SetActive(true);
                     canMove = false;
                     if(faceDown){
                         anim.SetBool("downCast", true);
@@ -271,6 +270,9 @@ public class PlayerMovement : MonoBehaviour
                     if(Input.GetMouseButtonDown(0)){  //if click while state 2, change to state3, need determine if hit a fish set a bool frm another script or sth 
                         fishstate = 3;
                     }
+                    // if(!Detection.Instance.inWater){
+                    //     fishstate = 3;
+                    // }
                 break;
                 case 3 :
                     canMove = false;
@@ -314,11 +316,9 @@ public class PlayerMovement : MonoBehaviour
     //This is Jason, I'm adding a checker function to link this player object with the tilemap
      void MarkTile(Vector3 offset)
     {
-    //     //if (Input.GetKeyDown(KeyCode.Space))
-    //     //{
-    //         Tilemap tmpmap = TileManager.tileManager.GroundTilemap;
-    //         Vector3Int tmpcellpos = tmpmap.WorldToCell(transform.position+offset);
-    //     var tmptile = tmpmap.GetTile(tmpcellpos);
+            Tilemap tmpmap = TileManager.tileManager.GroundTilemap;
+            Vector3Int tmpcellpos = tmpmap.WorldToCell(transform.position+offset);
+        var tmptile = tmpmap.GetTile(tmpcellpos);
     //     //Jason: I'll see if I have the time to optimize this mess
 
         TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);
@@ -329,16 +329,7 @@ public class PlayerMovement : MonoBehaviour
             tmpmap.SetColor(tmpcellpos, Color.black);
             PlantManager.plantManager.GeneratePlant(tmpmap.CellToWorld(tmpcellpos)+ new Vector3(.5f,.5f,0));
         }
-        //}
     }
-    //     TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);
-    //     //if(TileManager.tileManager.allTiles[tmptile].Seedable)
-    //     if(tileManager.CheckTheTile(tmpcellpos, tmpmap) == 1)
-    //     {
-    //         tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);
-    //         tmpmap.SetColor(tmpcellpos, Color.black);
-    //     }
-        
-    // }
+
 }
 

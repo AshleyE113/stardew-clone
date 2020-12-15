@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAct : MonoBehaviour
+public class Bait : MonoBehaviour
 {
  
     void Start()

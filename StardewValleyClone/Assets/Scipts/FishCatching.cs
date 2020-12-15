@@ -32,13 +32,14 @@ public class FishCatching : MonoBehaviour
     public float timer; //waiting for hit time
     public float fishingTime; //amount in the side bar
     public float greenPos; //destination
-    //public float currentPos;  
+    public float timer2; 
     public int fishIconPos; //destination
     public float currentfishIconPos;  
     [Header("Status")]
     public bool hit; //just to indicate in inspector whether player hit sth 
     public bool determine;
     public bool startTime; //when the timecount start
+       public bool startTime2; //determine if it its ground reel in
     bool fluctuate;
     public bool catching;  //if player is playing the mini fish game to catch fish
     [Header("Captured Fish")]
@@ -55,6 +56,7 @@ public class FishCatching : MonoBehaviour
     void Start()
     {
         timer = 0;
+        timer2 = 0;
         n = 0;
         FishCatchIndicator.SetActive(false);//later remove
         InvokeRepeating ("GreenPosRan", 0, 2);
@@ -75,6 +77,7 @@ public class FishCatching : MonoBehaviour
         if(PlayerMovement.Instance.faceRight==true){rt.transform.localPosition = new Vector3(63, -106, 0);}
         if(PlayerMovement.Instance.faceDown==true){rt.transform.localPosition = new Vector3(-63, -106, 0);}
             if(determine){
+                startTime2 = true;
                 if(h<=3 && h>=1){ //0,1,2: have fish
                     hit = true;
                     CalProb(); //do once each time, do it first
@@ -86,6 +89,19 @@ public class FishCatching : MonoBehaviour
             }
           if(startTime){   //start only when player hit sth
               timer+=Time.deltaTime;
+          }
+          if(startTime2){   //start only when player hit sth
+              timer2+=Time.deltaTime;
+          }
+
+          if(timer2>1){
+              if(!Detection.Instance.inWater){
+                  PlayerMovement.Instance.fishstate = 3;
+                  startTime2 = false;
+                  timer2 = 0;
+                  Reset();
+                  determine = false;
+              }
           }
           if(timer>3){ //wait time before hit/nt, mini fish game time
             fluctuate = true;

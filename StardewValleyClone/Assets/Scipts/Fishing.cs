@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,11 +29,11 @@ public class Fishing : MonoBehaviour
     // public bool canCast;
     bool startT;
     public float timer;
-    // public bool canFish;
     bool decrease;
 
     //Added by Jason
     public int State;
+    //public TileManager tileManager;
     void Awake() {
         Instance = this;
     }
@@ -47,6 +47,7 @@ public class Fishing : MonoBehaviour
         Slider.SetActive(false);
         timer = 0;
         startT = false;
+        //tileManager = TileManager.tileManager;
     }
 
     void Update()
@@ -81,9 +82,9 @@ public class Fishing : MonoBehaviour
                     Bait.SetActive(true);
                     ThrowBait(); //throw the bait
                     Slider.SetActive(false);
-
+                    //timer2+=Time.deltaTime;
                     //Added by Jason
-                    //CheckTileFishable();
+                    CheckTileFishable(); //already in side throw bait
             }
             if(PlayerMovement.Instance.fishstate == 3){ //state 3, player can reel in
                     ReelIn();
@@ -94,7 +95,7 @@ public class Fishing : MonoBehaviour
             if(timer>1){  //wait for time until going back to state 1: can cast again
                     PlayerMovement.Instance.fishstate = 1; //return to original state
                     startT = false;
-                    timer = 0;
+                    timer = 0;    
             }
         
         if(power<25){   //Changing colors of power indicator bar:
@@ -123,7 +124,7 @@ public class Fishing : MonoBehaviour
         hold = false;
 
         //Added by Jason
-        //CheckTileFishable(); later uncomment
+       // CheckTileFishable(); //later uncomment
     }
     void ReelIn(){  //ReelIn function
             Target.transform.position = playerPos; //the bait goes back to player
@@ -152,16 +153,16 @@ public class Fishing : MonoBehaviour
     //Added by Jason
     //This is a function dedicated to check the tile, the Debug.Log() will get called whenever the target object hits a non-water tile
     //However I am confused why it won't return to the idle animation state, I'll need to take a closer look at how the animation was managed here 
-    // public void CheckTileFishable()
-    // {
-    //     var tmp_tm = TileManager.tileManager;
-    //     var tmp_pm = PlayerMovement.Instance;
-    //     if (tmp_tm.CheckTheTile(Vector3Int.RoundToInt(Target.transform.position), tmp_tm.GroundTilemap) != 0)
-    //     {
-    //         //tmp_pm.SwitchingFishState();
-    //         //tmp_pm.anim.SetBool("downCast");
-    //         //tmp_pm.fishstate = 3;
-    //         Debug.Log("This tile is not fishable!");
-    //     }
-    // }
+    public void CheckTileFishable()
+    {
+        var tmp_tm = TileManager.tileManager;
+        var tmp_pm = PlayerMovement.Instance;
+        if (tmp_tm.CheckTheTile(Vector3Int.RoundToInt(Target.transform.position), tmp_tm.GroundTilemap) != 0)
+        {
+            //tmp_pm.SwitchingFishState();   //this part have problem
+            //tmp_pm.anim.SetBool("downCast");
+            //tmp_pm.fishstate = 3;
+            Debug.Log("This tile is not fishable!");
+        }
+    }
 }
