@@ -10,10 +10,14 @@ public class ToPlant : MonoBehaviour
     public bool OnLand;
     public bool isDragging;
     public GameObject newInstance;
+    public GameObject itemButton;
+    public GameObject Player;
     public bool readyToHarvest;
     public bool inHere;
+    public bool playerHere;
     public Sprite[] Plant1;
     public float Start_Time = 40;
+    
 
     //private int plant_index = 0;
     private SimpleInvent inventory;
@@ -27,7 +31,8 @@ public class ToPlant : MonoBehaviour
     {
         readyToHarvest = false;
         inHere = false; 
-        inventory = GameObject.FindGameObjectWithTag("Seed").GetComponent<SimpleInvent>();
+        playerHere = false;
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<SimpleInvent>();
     }
     //*/
 
@@ -35,7 +40,7 @@ public class ToPlant : MonoBehaviour
     {
         isDragging = true; 
         
-        if (readyToHarvest == true)
+        if (readyToHarvest == true && playerHere == true)
         {
             Debug.Log("Ready to reap!");
             //Seeds.SetActive(false);
@@ -45,6 +50,8 @@ public class ToPlant : MonoBehaviour
                 {
                     Debug.Log("Reaping time!");
                     inventory.isFull[i] = true;
+                    Instantiate(itemButton, inventory.Slots[i].transform, false);
+                    Destroy(gameObject);
                     break;
                 }
             }
@@ -99,17 +106,13 @@ public class ToPlant : MonoBehaviour
 
     }
 
-        
-
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        OnLand = true;
-        //Seeds.SetActive(false);
-        Debug.Log("In the soil");
-        
-        //Destroy(newInstance);
-        //As time passes, the plants grow
-        
+        OnLand = true;   
+        if (other.CompareTag("Player"))
+        {
+            playerHere = true;
+            Debug.Log("Colliding"); 
+        } 
     }
 }
