@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4585897296172738408}
   - component: {fileID: 763971610388769114}
   - component: {fileID: -529607992141043089}
+  - component: {fileID: -1696974925148327461}
   m_Layer: 0
-  m_Name: F1.2
+  m_Name: Sardine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,3 +114,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.01675258}
   serializedVersion: 2
   m_Radius: 0.19324738
+--- !u!114 &-1696974925148327461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894699415994657955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5a001cc5bd4e4f8f9aa80043a071c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FD: {fileID: 11400000, guid: 257cc789fa0a4432f81e9e361f494bf3, type: 2}

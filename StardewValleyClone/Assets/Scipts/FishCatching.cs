@@ -228,10 +228,12 @@ public class FishCatching : MonoBehaviour
         fishingTime = 0; //reset value
         startTime = false; //stop timer
         timer = 0; //reset value
+        timer2 = 0;
         greenPos = 0;  //reset value //later remove it
         fluctuate = false;
         fishIconPos = 0;
         currentfishIconPos = 0;
+        determine = false; //!new placement
     }
 
 }

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2879140635613420220}
   - component: {fileID: 949464621930833632}
   - component: {fileID: -229247678925358722}
+  - component: {fileID: -1226078693659765534}
   m_Layer: 0
-  m_Name: F1.4
+  m_Name: Rainbow Trout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,3 +114,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.019433022}
   serializedVersion: 2
   m_Radius: 0.22056699
+--- !u!114 &-1226078693659765534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7363897619282695110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5a001cc5bd4e4f8f9aa80043a071c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FD: {fileID: 11400000, guid: f9b85c22c32b149c5990665448e1e4af, type: 2}
