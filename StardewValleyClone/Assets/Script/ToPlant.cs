@@ -19,7 +19,7 @@ public class ToPlant : MonoBehaviour
     //Added by Jason
     public bool doneGrowth;
 
-    WaitForSeconds delay = new WaitForSeconds(3f);
+    WaitForSeconds delay = new WaitForSeconds(0.5f);
     ArrayList Inventory = new ArrayList();
 
 
@@ -43,7 +43,13 @@ public class ToPlant : MonoBehaviour
             Debug.Log("Ready to reap!");
             Seeds.SetActive(false);
             Inventory.Add(Plant1[Plant1.Length - 1]);
+            PlantManager.plantManager.DeleteFromList(this.transform.position);
         }
+    }
+
+    public void OnMouseOver()
+    {
+        Debug.Log("Yo!");
     }
 
     //Gets te mouse's position in the game scene

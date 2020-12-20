@@ -214,22 +214,34 @@ public class PlayerMovement : MonoBehaviour
                 if(faceDown){
                     anim.SetBool("faceDown", false);
                     anim.SetBool("downDig", true);
-                    MarkTile(new Vector3(0,-0.6f,0)); //later uncomment
+                    if(Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        MarkTile(new Vector3(0, -0.6f, 0)); //later uncomment
+                    }
                 }
                  if(faceUp){
                     anim.SetBool("faceUp", false);
                     anim.SetBool("upDig", true);
-                    MarkTile(new Vector3(0,0.6f,0));
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        MarkTile(new Vector3(0, 0.6f, 0));
+                    }
                 }
                  if(faceLeft){
                     anim.SetBool("faceLeft", false);
                     anim.SetBool("leftDig", true);
-                    MarkTile(new Vector3(-0.6f,0,0));
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        MarkTile(new Vector3(-0.6f, 0, 0));
+                    }
                 }
                   if(faceRight){
                     anim.SetBool("faceLeft", false);
                     anim.SetBool("leftDig", true);
-                    MarkTile(new Vector3(0.6f,0,0));
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        MarkTile(new Vector3(0.6f, 0, 0));
+                    }
                 }
                 farmstate = 1;  //return to original state
                 canMove = true;
@@ -318,7 +330,7 @@ public class PlayerMovement : MonoBehaviour
     {
             Tilemap tmpmap = TileManager.tileManager.GroundTilemap;
             Vector3Int tmpcellpos = tmpmap.WorldToCell(transform.position+offset);
-        var tmptile = tmpmap.GetTile(tmpcellpos);
+            var tmptile = tmpmap.GetTile(tmpcellpos);
     //     //Jason: I'll see if I have the time to optimize this mess
 
         TileBase tmptiletest = TileManager.tileManager.MatchTile(transform.position + offset);

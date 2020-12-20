@@ -1,7 +1,130 @@
 fileFormatVersion: 2
 guid: 65426605fd71d134fb3dc474bebf6241
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5418357229698183291
+    second: cnjbep3b_0
+  - first:
+      213: 814951726489658435
+    second: cnjbep3b_1
+  - first:
+      213: -6276361998365565153
+    second: cnjbep3b_2
+  - first:
+      213: 7257601229228458049
+    second: cnjbep3b_3
+  - first:
+      213: -8013503538879863067
+    second: cnjbep3b_4
+  - first:
+      213: -5677271439022202550
+    second: cnjbep3b_5
+  - first:
+      213: -2009715521490287417
+    second: cnjbep3b_6
+  - first:
+      213: -4306349687791973577
+    second: cnjbep3b_7
+  - first:
+      213: 5416981453439946483
+    second: cnjbep3b_8
+  - first:
+      213: 3116797515181602151
+    second: cnjbep3b_9
+  - first:
+      213: 2624486710287386563
+    second: cnjbep3b_10
+  - first:
+      213: -8790813193948649819
+    second: cnjbep3b_11
+  - first:
+      213: -7287801452216929711
+    second: cnjbep3b_12
+  - first:
+      213: 3324580640347785901
+    second: cnjbep3b_13
+  - first:
+      213: -3065289933769714908
+    second: cnjbep3b_14
+  - first:
+      213: -7914423445609202780
+    second: cnjbep3b_15
+  - first:
+      213: 26753516679604850
+    second: cnjbep3b_16
+  - first:
+      213: 4877620403364646047
+    second: cnjbep3b_17
+  - first:
+      213: 3006176172104649588
+    second: cnjbep3b_18
+  - first:
+      213: 6395370365084536162
+    second: cnjbep3b_19
+  - first:
+      213: -1307303268294528583
+    second: cnjbep3b_20
+  - first:
+      213: -585358949924618191
+    second: cnjbep3b_21
+  - first:
+      213: -2388961309154471444
+    second: cnjbep3b_22
+  - first:
+      213: 1393893690834523311
+    second: cnjbep3b_23
+  - first:
+      213: 7905497159245752167
+    second: cnjbep3b_24
+  - first:
+      213: -4229588007147232320
+    second: cnjbep3b_25
+  - first:
+      213: 401212829657481341
+    second: cnjbep3b_26
+  - first:
+      213: -8382514297588352465
+    second: cnjbep3b_27
+  - first:
+      213: -2564971719413980704
+    second: cnjbep3b_28
+  - first:
+      213: 8316563714893356235
+    second: cnjbep3b_29
+  - first:
+      213: 1023198781825678286
+    second: cnjbep3b_30
+  - first:
+      213: 6335751735684461265
+    second: cnjbep3b_31
+  - first:
+      213: 4144597127907659364
+    second: cnjbep3b_32
+  - first:
+      213: -8393706524254375904
+    second: cnjbep3b_33
+  - first:
+      213: 5526059209573496158
+    second: cnjbep3b_34
+  - first:
+      213: -5256069089967278010
+    second: cnjbep3b_35
+  - first:
+      213: 4634362447911213377
+    second: cnjbep3b_36
+  - first:
+      213: -9052668316696652702
+    second: cnjbep3b_37
+  - first:
+      213: -5150631954098258077
+    second: cnjbep3b_38
+  - first:
+      213: 5377176575633734383
+    second: cnjbep3b_39
+  - first:
+      213: -4722353244149636027
+    second: cnjbep3b_40
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +163,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -61,6 +184,30 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
