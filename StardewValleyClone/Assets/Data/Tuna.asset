@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f54c4b7c65495eacf1d2cce99ae3f, type: 3}
+  m_Name: Tuna
+  m_EditorClassIdentifier: 
+  name: Tuna
+  itemPng: {fileID: -1244871615055023643, guid: 206aa7f9bad814a8da48769b0e19193f,
+    type: 3}
+  f: {fileID: 5032896303871133610, guid: 618c7187f537a429fbed8bab41f0959e, type: 3}
