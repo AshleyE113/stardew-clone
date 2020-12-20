@@ -7,6 +7,7 @@ public class Detection : MonoBehaviour
     public static Detection Instance;
     public bool inWater;
     public bool startDetect;
+    public GameObject Player;
     void Awake() {
         Instance = this;
     }
@@ -18,6 +19,10 @@ public class Detection : MonoBehaviour
 
     void Update()
     {
+        if(PlayerMovement.Instance.faceUp==true){this.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y+1f, 0);}
+        if(PlayerMovement.Instance.faceRight==true){this.transform.position = new Vector3(Player.transform.position.x+1f, Player.transform.position.y, 0);}  
+        if(PlayerMovement.Instance.faceLeft==true){this.transform.position = new Vector3(Player.transform.position.x-1f, Player.transform.position.y, 0);}
+        if(PlayerMovement.Instance.faceDown==true){this.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y-1f, 0);}
         if(!inWater){
             //PlayerMovement.Instance.fishstate = 3; //reel in
             //Fishing.Instance.startT = false;
