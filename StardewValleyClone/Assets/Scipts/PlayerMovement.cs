@@ -314,8 +314,8 @@ public class PlayerMovement : MonoBehaviour
         //if(TileManager.tileManager.allTiles[tmptile].Seedable)
         if(tileManager.CheckTheTile(tmpcellpos, tmpmap) == 1)
         {
-            tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);
-            tmpmap.SetColor(tmpcellpos, Color.black);
+            //tmpmap.SetTileFlags(tmpcellpos, TileFlags.None);
+            //tmpmap.SetColor(tmpcellpos, Color.black);
             PlantManager.plantManager.GeneratePlant(tmpmap.CellToWorld(tmpcellpos)+ new Vector3(.5f,.5f,0));
         }
         //}
