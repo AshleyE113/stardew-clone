@@ -178,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKey(downKey))
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                //transform.eulerAngles = new Vector3(0, 0, 0);
                 movement += Vector2.down;
                     faceLeft = false;
                     faceRight = false;
