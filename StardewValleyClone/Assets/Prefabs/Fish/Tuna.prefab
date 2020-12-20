@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2841328269708409292}
   - component: {fileID: -4374389124930605015}
   - component: {fileID: 5519418598740271767}
+  - component: {fileID: -2299724420405865385}
   m_Layer: 0
-  m_Name: F1.1
+  m_Name: Tuna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,3 +114,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.009716988}
   serializedVersion: 2
   m_Radius: 0.23028302
+--- !u!114 &-2299724420405865385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841328269708409293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5a001cc5bd4e4f8f9aa80043a071c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FD: {fileID: 11400000, guid: c746d7712201f411391852b800f5ec6b, type: 2}

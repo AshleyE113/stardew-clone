@@ -21,7 +21,13 @@ public class ClickableArea : MonoBehaviour
     void OnMouseDown() {
     }
     void OnMouseOver() {
-        inField = true;
+        Debug.Log(this.gameObject.layer);
+        LayerMask mask = LayerMask.GetMask("Clickable Area"); 
+        if(this.gameObject.layer == mask){
+        inField = false;   //true
+        }else{
+            inField = true;  //false
+        }
         //Debug.Log("inarea");
     }
     void OnMouseExit()

@@ -39,12 +39,13 @@ public class FishCatching : MonoBehaviour
     public bool hit; //just to indicate in inspector whether player hit sth 
     public bool determine;
     public bool startTime; //when the timecount start
-       public bool startTime2; //determine if it its ground reel in
+    public bool startTime2; //determine if it its ground reel in
     bool fluctuate;
     public bool catching;  //if player is playing the mini fish game to catch fish
     [Header("Captured Fish")]
     public List<GameObject> CaughtFish = new List<GameObject>();
     public GameObject CaptureFish;
+    public GameObject HotBar;
       public enum FishType 
     {
     NONE,Trash,Type2,Type1
@@ -65,6 +66,7 @@ public class FishCatching : MonoBehaviour
         fishIconPos = 0;
         currentfishIconPos = 0;
         currentFishType = FishType.NONE; 
+        HotBar.SetActive(true);
     }
 //order of stuff: player cast (fishstate2==true)> determine if hit a fish(h)>wait few seconds, if hit, display slider(do the whole slider fluctuating thing)> if manage to click many times and fish icon stay in green within time, fish caught> force reel in(turn fishstate to 3)
    //should this be a separate fishstate
@@ -106,6 +108,7 @@ public class FishCatching : MonoBehaviour
           if(timer>3){ //wait time before hit/nt, mini fish game time
             fluctuate = true;
                 if(currentFishType != FishType.Trash){
+                    HotBar.SetActive(false);
                     PlayerMovement.Instance.fishstate = 4;
                     FishCatchIndicator.SetActive(true);
                     BarControl();
@@ -126,7 +129,7 @@ public class FishCatching : MonoBehaviour
                 Reset();
                 HoeButton.GetComponent<Button>().interactable = true;  //player can click this while doing mini game
                 PlayerMovement.Instance.fishstate = 3; //reel in
-                //Instanciate
+                HotBar.SetActive(true);
                 if(currentFishType != FishType.Trash){
                     InstanciateFishType();
                 }
@@ -227,11 +230,14 @@ public class FishCatching : MonoBehaviour
     public void Reset(){
         fishingTime = 0; //reset value
         startTime = false; //stop timer
+        startTime2 = false; //stop timer
         timer = 0; //reset value
+        timer2 = 0;
         greenPos = 0;  //reset value //later remove it
         fluctuate = false;
         fishIconPos = 0;
         currentfishIconPos = 0;
+        determine = false; //!new placement
     }
 
 }

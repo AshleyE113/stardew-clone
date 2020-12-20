@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f54c4b7c65495eacf1d2cce99ae3f, type: 3}
+  m_Name: Trash
+  m_EditorClassIdentifier: 
+  name: Trash
+  itemPng: {fileID: -6794956265916257420, guid: 206aa7f9bad814a8da48769b0e19193f,
+    type: 3}
+  f: {fileID: 1139686868223928635, guid: 70ba2d93d33854b6987b62470e39631b, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5624594031636684295}
   - component: {fileID: 3144344792364420867}
   - component: {fileID: 6885121554934779171}
+  - component: {fileID: 1528575401281075619}
   m_Layer: 0
   m_Name: Seaweed
   m_TagString: Untagged
@@ -113,3 +114,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.009716034}
   serializedVersion: 2
   m_Radius: 0.19141793
+--- !u!114 &1528575401281075619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8760828327346881578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5a001cc5bd4e4f8f9aa80043a071c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FD: {fileID: 11400000, guid: 539990995cad74f6b9fd399081b01ab6, type: 2}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8064492786267196744}
   - component: {fileID: -6544804166458536339}
   - component: {fileID: -3125377696827199671}
+  - component: {fileID: 2185800883599960486}
   m_Layer: 0
   m_Name: Clam
   m_TagString: Untagged
@@ -113,3 +114,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.009716511}
   serializedVersion: 2
   m_Radius: 0.16141748
+--- !u!114 &2185800883599960486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481464859929789184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5a001cc5bd4e4f8f9aa80043a071c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FD: {fileID: 11400000, guid: 0c988daef23104c3a9ebc37c62b8c20b, type: 2}
