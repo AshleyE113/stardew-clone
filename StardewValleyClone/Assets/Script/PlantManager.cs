@@ -8,6 +8,7 @@ public class PlantManager : MonoBehaviour
     public GameObject GrowingSeedPrefab;
     int count;
     public static PlantManager plantManager;
+    public Dictionary<Vector3,GameObject> plantList;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class PlantManager : MonoBehaviour
         {
             plantManager = this;
         }
+
+        plantList = new Dictionary<Vector3, GameObject>();
     }
 
     // Update is called once per frame
@@ -27,8 +30,19 @@ public class PlantManager : MonoBehaviour
 
     public void GeneratePlant(Vector3 pos)
     {
-        var newPlant = Instantiate(GrowingSeedPrefab, pos, Quaternion.identity);
-        count++;
-        newPlant.name = newPlant.name + count;
+        var tmp = plantList.ContainsKey(pos);
+        Debug.Log(tmp);
+        if (!tmp)
+        {
+            var newPlant = Instantiate(GrowingSeedPrefab, pos, Quaternion.identity);
+            count++;
+            newPlant.name = newPlant.name + count;
+            plantList.Add(pos, newPlant);
+        }
+    }
+
+    public void DeleteFromList(Vector3 pos)
+    {
+        plantList.Remove(pos);
     }
 }
