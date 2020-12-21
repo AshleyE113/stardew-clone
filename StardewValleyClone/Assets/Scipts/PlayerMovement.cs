@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject StrRenderer;
     public GameObject UI;  //powerbar
     public GameObject Player;
-    //public GameObject FC; //FishCatching Object
+    public GameObject ClickableObj;
     [Header("Physics")]
     public float speed;
     public Rigidbody2D rb;
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         farmstate = 0;  //farming state: determine steps of farming
         addState = false;
         farmhit = false;
-
+        ClickableObj.GetComponent<Collider>().enabled = true;
         //Added by Jason
         tileManager = TileManager.tileManager;
     }
@@ -164,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
                     faceDown = false;
                 anim.SetBool("leftWalk", true);
                 anim.SetBool("faceLeft", false);
+                anim.SetBool("upDig", false); //?
             }
             if (Input.GetKey(upKey))
             {
@@ -174,6 +175,7 @@ public class PlayerMovement : MonoBehaviour
                     faceDown = false;
                 anim.SetBool("upWalk", true);
                 anim.SetBool("faceUp", false);
+                anim.SetBool("upDig", false); //?
 
             }
             if (Input.GetKey(downKey))
@@ -313,6 +315,10 @@ public class PlayerMovement : MonoBehaviour
             Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = false;
             StrRenderer.GetComponent<LineRenderer>().sortingOrder = 0;//changing sorting layer of the linerenderer;Player = 1;
         }
+        if(col.gameObject.tag == "NonClick"){
+            ClickableObj.GetComponent<BoxCollider2D>().enabled = false;
+        }
+
     }
     void OnTriggerExit2D(Collider2D col) {
          if(col.gameObject.tag == "Bait"){
@@ -322,6 +328,9 @@ public class PlayerMovement : MonoBehaviour
             }
             Fishing.Instance.Bait.GetComponent<SpriteRenderer>().enabled = true;
             StrRenderer.GetComponent<LineRenderer>().sortingOrder = 2; //changing sorting layer of the linerenderer;Player = 1;
+        }
+        if(col.gameObject.tag == "NonClick"){
+            ClickableObj.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 
