@@ -16,26 +16,57 @@ public class ToPlant : MonoBehaviour
     public float Start_Time = 40;
     //private int plant_index = 0;
 
-    WaitForSeconds delay = new WaitForSeconds(5f);
-    
+    //Added by Jason
+    public bool doneGrowth;
+
+    WaitForSeconds delay = new WaitForSeconds(0.5f);
+    ArrayList Inventory = new ArrayList();
+
 
     ///*
     void Start()
     {
         readyToHarvest = false;
-        inHere = false;       
+        inHere = false;
+
+        //ABJ
+        doneGrowth = false;
     }
     //*/
 
     private void OnMouseDown()
     {
-        isDragging = true; 
+        isDragging = true;
+
+        if (readyToHarvest == true)
+        {
+            Debug.Log("Ready to reap!");
+            Seeds.SetActive(false);
+            Inventory.Add(Plant1[Plant1.Length - 1]);
+            PlantManager.plantManager.DeleteFromList(this.transform.position);
+        }
+    }
+
+    public void OnMouseOver()
+    {
+        Debug.Log("Yo!");
     }
 
     //Gets te mouse's position in the game scene
     private void OnMouseUp() 
     {
         isDragging = false;    
+    }
+
+    public void Harvest()
+    { 
+        if (readyToHarvest == true)
+        {
+            Debug.Log("Ready to reap!");
+            Seeds.SetActive(false);
+            Inventory.Add(Plant1[Plant1.Length - 1]);
+        }
+
     }
 
     void Update()
@@ -53,7 +84,14 @@ public class ToPlant : MonoBehaviour
         //    StartCoroutine(ShowGrowth());
         //}
         //This will instantly play when it's generated
-        StartCoroutine(ShowGrowth());
+        if (!readyToHarvest && !doneGrowth)
+        {
+            StartCoroutine(ShowGrowth());
+        }
+        //if (readyToHarvest)
+        //{
+        //    Harvest();
+        //}
     } 
 
     //Mod by Jason
@@ -65,6 +103,7 @@ public class ToPlant : MonoBehaviour
             Invoke("ShowGrowth", 5f);
         }*/
         inHere = true;
+        doneGrowth = true;
         for (int i = 0; i < Plant1.Length; i++)
         {
             Debug.Log("In loop");
