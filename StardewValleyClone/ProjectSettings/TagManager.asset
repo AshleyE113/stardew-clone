@@ -7,6 +7,7 @@ TagManager:
   - Bait
   - 'Clickable '
   - Water
+  - NonClick
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Decor
+    uniqueID: 2403840567
     locked: 0
   - name: Player
     uniqueID: 3104126845

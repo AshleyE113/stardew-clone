@@ -13,7 +13,7 @@ public class ClickableWater : MonoBehaviour
     // }
     void Start()
     {
-        ClickableArea.Instance.inField = false;
+        // ClickableArea.Instance.inField = false;
     }
     void Update()
     {
@@ -22,10 +22,16 @@ public class ClickableWater : MonoBehaviour
     void OnMouseDown() {
     }
     void OnMouseOver() {
-        ClickableArea.Instance.inField = true;
+        // ClickableArea.Instance.inField = true;
+           LayerMask mask = LayerMask.GetMask("UI"); 
+        if(this.gameObject.layer == mask){
+        ClickableArea.Instance.inField = true;   //true
+        }else{
+            ClickableArea.Instance.inField = false;  //false
+        }
     }
     void OnMouseExit()
     {
-        ClickableArea.Instance.inField = false;
+        // ClickableArea.Instance.inField = false;
     }
 }
