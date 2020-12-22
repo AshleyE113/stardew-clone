@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -35,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
     public bool addState;
     public bool farmhit;
 
-    //Added by Jason
+    public GameObject HoeButton;
+    public GameObject FishingButton;
     public TileManager tileManager;
     private Vector3 playerDir;
     
@@ -58,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         farmstate = 0;  //farming state: determine steps of farming
         addState = false;
         farmhit = false;
-        ClickableObj.GetComponent<Collider>().enabled = true;
+//        ClickableObj.GetComponent<Collider>().enabled = true;
         //Added by Jason
         tileManager = TileManager.tileManager;
         Vector3 playerDir = Vector3.down;
@@ -341,7 +343,9 @@ public class PlayerMovement : MonoBehaviour
             StrRenderer.GetComponent<LineRenderer>().sortingOrder = 0;//changing sorting layer of the linerenderer;Player = 1;
         }
         if(col.gameObject.tag == "NonClick"){
-            ClickableObj.GetComponent<BoxCollider2D>().enabled = false;
+            HoeButton.GetComponent<Button>().interactable = false;
+            FishingButton.GetComponent<Button>().interactable = false;
+            ClickableObj.GetComponent<BoxCollider2D>().size = new Vector2(1,0.59f);
         }
 
     }
@@ -355,7 +359,10 @@ public class PlayerMovement : MonoBehaviour
             StrRenderer.GetComponent<LineRenderer>().sortingOrder = 2; //changing sorting layer of the linerenderer;Player = 1;
         }
         if(col.gameObject.tag == "NonClick"){
-            ClickableObj.GetComponent<BoxCollider2D>().enabled = true;
+            //ClickableObj.GetComponent<BoxCollider2D>().enabled = true;
+            HoeButton.GetComponent<Button>().interactable = true;
+            FishingButton.GetComponent<Button>().interactable = true;
+            ClickableObj.GetComponent<BoxCollider2D>().size = new Vector2(1,1);
         }
     }
 
