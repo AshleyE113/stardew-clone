@@ -51,7 +51,6 @@ public class FarmLandChange : MonoBehaviour
         Debug.Log("Reaping here");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (canHarvest && Input.GetMouseButtonDown(0) && mouseOver == true)

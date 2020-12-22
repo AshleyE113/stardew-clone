@@ -10,13 +10,16 @@ public class InventoryManager : MonoBehaviour
     public bool[] full;  //check if slots are full
     public static InventoryManager Instance; 
     public bool placeItem;   //on off for placing item
+    public bool placeSeed;
     public List<GameObject> PlacedItem = new List<GameObject>(); //not important
     public GameObject CurrentFish; //save variable to get data from fish
+    public GameObject plant;
     [Header("UI")]
     public GameObject InventoryUI;
     [Header("HotBar")]
     public GameObject[] hbSlot;
     public bool[] hbFull;
+    
 
     void Awake() {
         Instance = this;
@@ -25,6 +28,7 @@ public class InventoryManager : MonoBehaviour
     {
         InventoryUI.SetActive(false);
         placeItem = false;   //later turn false 
+        placeSeed = false;
         // for (int i = 0; i < slot.Length; i++)
         //     {
         //     }
@@ -36,7 +40,7 @@ public class InventoryManager : MonoBehaviour
            InventoryUI.SetActive(true);
        }
         if(placeItem){
-            for (int i = 0; i < slot.Length; i++)  //inventory
+            for (int i = 0; i < slot.Length; i++)  //inventory do this once again for seed
             {
                 if(full[i] == false){
                     full[i] = true;
@@ -53,6 +57,25 @@ public class InventoryManager : MonoBehaviour
                 }
             }
             placeItem = false;
+        }
+        if(placeSeed){
+            for (int i = 0; i < slot.Length; i++)  //inventory do this once again for seed
+            {
+                if(full[i] == false){
+                    full[i] = true;
+                    Instantiate(plant, slot[i].transform, false);
+                    break;
+                }
+            }
+             for (int i = 0; i < hbSlot.Length; i++)  //hotbar
+            {
+                if(hbFull[i] == false){
+                    hbFull[i] = true;
+                    Instantiate(plant, hbSlot[i].transform, false);
+                    break;
+                }
+            }
+            placeSeed = false;
         }
         ChechFullness();
 
