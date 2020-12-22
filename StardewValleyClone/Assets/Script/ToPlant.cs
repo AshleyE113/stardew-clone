@@ -44,6 +44,7 @@ public class ToPlant : MonoBehaviour
             Seeds.SetActive(false);
             Inventory.Add(Plant1[Plant1.Length - 1]);
             PlantManager.plantManager.DeleteFromList(this.transform.position);
+            InventoryManager.Instance.placeSeed = true;
         }
     }
 
