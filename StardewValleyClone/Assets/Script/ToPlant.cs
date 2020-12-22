@@ -73,7 +73,7 @@ public class ToPlant : MonoBehaviour
         {
             Debug.Log("Ready to reap!");
             //Seeds.SetActive(false);
-
+            InventoryManager.Instance.placeSeed = true;
             Destroy(Seeds);
             //Notes by Jason:
             //Why piling up the seed objects?
