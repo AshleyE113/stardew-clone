@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8001281442067978874}
   - component: {fileID: 8001281442067978875}
   - component: {fileID: 8001281442067978759}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Seeds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,3 +162,4 @@ MonoBehaviour:
   - {fileID: 4290141366703136794, guid: 307c6c5257ebb8f4d96af97b62788ff7, type: 3}
   Start_Time: 40
   doneGrowth: 0
+  Player_ClickableArea: {fileID: 0}

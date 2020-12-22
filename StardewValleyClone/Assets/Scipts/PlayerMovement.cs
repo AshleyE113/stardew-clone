@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -35,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Added by Jason
     public TileManager tileManager;
+    private Vector3 playerDir;
     
     void Awake() {
         Instance = this;
@@ -58,11 +61,33 @@ public class PlayerMovement : MonoBehaviour
         ClickableObj.GetComponent<Collider>().enabled = true;
         //Added by Jason
         tileManager = TileManager.tileManager;
+        Vector3 playerDir = Vector3.down;
     }
      void FixedUpdate()
     {
         Vector2 velocity = rb.velocity;
-        rb.velocity = new Vector2(movement.x * speed, movement.y* speed);  
+        rb.velocity = new Vector2(movement.x * speed, movement.y* speed);
+
+        //ABJ
+        if (faceLeft)
+        {
+            playerDir = Vector3.left;
+        }
+        if (faceRight)
+        {
+            playerDir = Vector3.right;
+        }
+        if (faceDown)
+        {
+            playerDir = Vector3.down;
+        }
+        if (faceUp)
+        {
+            playerDir = Vector3.up;
+        }
+
+        
+        Harvest();
     }
     void Update()
     {
@@ -256,7 +281,7 @@ public class PlayerMovement : MonoBehaviour
                     if(Input.GetMouseButtonUp(0)){ //mouseUp, do state 2 stuff
                         StrRenderer.GetComponent<LineRenderer>().enabled = true;
                         fishstate = 2;  //move to next,  ==raise  ==2 
-                        FishCatching.Instance.h = Random.Range(1,5); //working
+                        FishCatching.Instance.h = UnityEngine.Random.Range(1,5); //working
                         Debug.Log(FishCatching.Instance.h);
                         //if(Detection.Instance.inWater){
                         FishCatching.Instance.determine = true;
@@ -352,5 +377,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //ABJ
+    void Harvest()
+    {
+        int layerMask = 1 << 14;
+
+        RaycastHit2D hit2D = Physics2D.Raycast(transform.position, playerDir, 1, layerMask);
+
+        if (hit2D.collider != null)
+        {
+            var tmp = hit2D.collider;
+            Debug.Log(tmp);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //Destroy(tmp.gameObject);
+                tmp.gameObject.GetComponent<ToPlant>().Harvest();
+            }
+        }
+        Debug.DrawRay(transform.position, playerDir, Color.red);
+    }
 }
 

@@ -18,6 +18,7 @@ public class ToPlant : MonoBehaviour
 
     //Added by Jason
     public bool doneGrowth;
+    public GameObject Player_ClickableArea;
 
     WaitForSeconds delay = new WaitForSeconds(0.5f);
     ArrayList Inventory = new ArrayList();
@@ -31,25 +32,32 @@ public class ToPlant : MonoBehaviour
 
         //ABJ
         doneGrowth = false;
+
     }
     //*/
 
-    private void OnMouseDown()
-    {
-        isDragging = true;
+    //Moded by Jason
+    //private void OnMouseDown()
+    //{
+    //    isDragging = true;
 
-        if (readyToHarvest == true)
-        {
-            Debug.Log("Ready to reap!");
-            Seeds.SetActive(false);
-            Inventory.Add(Plant1[Plant1.Length - 1]);
-            PlantManager.plantManager.DeleteFromList(this.transform.position);
-        }
-    }
+    //    if (readyToHarvest == true)
+    //    {
+    //        Debug.Log("Ready to reap!");
+    //        Seeds.SetActive(false);
+    //        Inventory.Add(Plant1[Plant1.Length - 1]);
+    //        PlantManager.plantManager.DeleteFromList(this.transform.position);
+    //    }
+    //}
+    //Notes from Jason:
+    //First of all, simply clikcing on the object no matter how far the character is from the object is just counterintuitive, no one should ever do that to a FARMING GAME!
+    //I've added a raycast method in the PlayerMovement script for harvesting
 
+    //Added by Jason
     public void OnMouseOver()
     {
         Debug.Log("Yo!");
+        //Use for debug
     }
 
     //Gets te mouse's position in the game scene
@@ -58,12 +66,17 @@ public class ToPlant : MonoBehaviour
         isDragging = false;    
     }
 
+    //ABJ
     public void Harvest()
     { 
         if (readyToHarvest == true)
         {
             Debug.Log("Ready to reap!");
-            Seeds.SetActive(false);
+            //Seeds.SetActive(false);
+
+            Destroy(Seeds);
+            //Notes by Jason:
+            //Why piling up the seed objects?
             Inventory.Add(Plant1[Plant1.Length - 1]);
         }
 
@@ -106,13 +119,13 @@ public class ToPlant : MonoBehaviour
         doneGrowth = true;
         for (int i = 0; i < Plant1.Length; i++)
         {
-            Debug.Log("In loop");
+            //Debug.Log("In loop");
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Plant1[i];
             yield return delay;
 
             if (i == Plant1.Length-1)
             {
-                Debug.Log("breaking");
+                //Debug.Log("breaking");
                 readyToHarvest = true;
                 inHere = false;
                 break;
